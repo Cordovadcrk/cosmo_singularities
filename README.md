@@ -105,12 +105,6 @@ $$
 
 Por eso la densidad solo diverge en tiempo finito si $\nu>1/2$. Los notebooks 05 y A01 aplican esta orientación temporal de forma explícita. Las utilidades históricas `classify_phantom_q0_by_nu`, `classify_phantom_qalpha_rho_by_nu` y los builders asociados se conservan sin cambios en `src/`, pero no se usan aquí para asignar un destino futuro cuando $\nu\leq1/2$: sus etiquetas tipo II/IV por intervalos alrededor de $\rho\to0$ no constituyen un clasificador del futuro expansivo y ciertos exponentes discretos requieren además un análisis de regularidad separado.
 
-## Vista previa de resultados
-
-| Mapa phantom revisado | Mapa barotrópico |
-|---|---|
-| ![Mapa phantom revisado](results/figures/barotropic/phantom_scan/phantom_map_omega_m1p2.png) | ![Mapa de comportamiento barotrópico](results/figures/barotropic/behavior_maps/behavior_map_omega_m1d200.png) |
-
 ## Verificación
 
 Ejecuta las pruebas rápidas con:
