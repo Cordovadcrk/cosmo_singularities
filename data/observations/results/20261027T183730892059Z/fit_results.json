@@ -1,0 +1,196 @@
+{
+  "scope": "Ajustes condicionales, omega/alpha_bar/beta FIJOS; Om y H0*rd libres, M perfilada.",
+  "names": [
+    "omega_m",
+    "H0_rd_km_s"
+  ],
+  "H0_reference": 70,
+  "n_bao": 13,
+  "n_sn": 1580,
+  "cases": {
+    "LCDM_control": [
+      -1.0,
+      0.0,
+      1.0
+    ],
+    "phantom_no_diffusion": [
+      -1.2,
+      0.0,
+      1.0
+    ],
+    "phantom_diffusion": [
+      -1.2,
+      4.0,
+      -1.0
+    ]
+  },
+  "results": {
+    "LCDM_control": {
+      "parameters": [
+        0.30440536569913823,
+        10099.824946251787
+      ],
+      "chi2": 1399.7953877823832,
+      "chi2_bao": 10.903837737815376,
+      "chi2_sn": 1388.8915500445678,
+      "M_profile": -19.360550035742698,
+      "success": true,
+      "message": "Optimization terminated successfully.",
+      "at_bound": [
+        false,
+        false
+      ],
+      "starts": [
+        {
+          "success": true,
+          "chi2": 1399.7953877823832,
+          "parameters": [
+            0.30440536569913823,
+            10099.824946251787
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 1399.7953877823907,
+          "parameters": [
+            0.30440528774464237,
+            10099.825566874193
+          ]
+        }
+      ],
+      "chi2_grid_refinement_difference": 9.216364560415968e-09
+    },
+    "phantom_no_diffusion": {
+      "parameters": [
+        0.3176950230206445,
+        10326.876636832763
+      ],
+      "chi2": 1442.0160600053462,
+      "chi2_bao": 29.53135353355454,
+      "chi2_sn": 1412.4847064717917,
+      "M_profile": -19.386978289111763,
+      "success": true,
+      "message": "Optimization terminated successfully.",
+      "at_bound": [
+        false,
+        false
+      ],
+      "starts": [
+        {
+          "success": true,
+          "chi2": 1442.0160600053462,
+          "parameters": [
+            0.3176950230206445,
+            10326.876636832763
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 1442.016060007049,
+          "parameters": [
+            0.3176950446014332,
+            10326.875307657625
+          ]
+        }
+      ],
+      "chi2_grid_refinement_difference": 1.3832504919264466e-08
+    },
+    "phantom_diffusion": {
+      "parameters": [
+        0.30803064488600296,
+        10152.062080631591
+      ],
+      "chi2": 1405.0156592526432,
+      "chi2_bao": 13.074840605097936,
+      "chi2_sn": 1391.9408186475453,
+      "M_profile": -19.365995904565953,
+      "success": true,
+      "message": "Optimization terminated successfully.",
+      "at_bound": [
+        false,
+        false
+      ],
+      "starts": [
+        {
+          "success": true,
+          "chi2": 1405.015659252827,
+          "parameters": [
+            0.3080306471441413,
+            10152.061684662978
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 1405.0156592526432,
+          "parameters": [
+            0.30803064488600296,
+            10152.062080631591
+          ]
+        }
+      ],
+      "chi2_grid_refinement_difference": 9.891437002806924e-09
+    }
+  },
+  "data_manifests": {
+    "desi_dr2": {
+      "repository": "CobayaSampler/bao_data",
+      "commit": "bb0c1c9009dc76d1391300e169e8df38fd1096db",
+      "downloaded_utc": "2026-10-27T18:35:19.288869+00:00",
+      "files": [
+        {
+          "name": "bao_mean.txt",
+          "url": "https://raw.githubusercontent.com/CobayaSampler/bao_data/bb0c1c9009dc76d1391300e169e8df38fd1096db/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt",
+          "sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+          "bytes": 472
+        },
+        {
+          "name": "bao_cov.txt",
+          "url": "https://raw.githubusercontent.com/CobayaSampler/bao_data/bb0c1c9009dc76d1391300e169e8df38fd1096db/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_cov.txt",
+          "sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+          "bytes": 2547
+        }
+      ]
+    },
+    "pantheon_plus": {
+      "repository": "PantheonPlusSH0ES/DataRelease",
+      "commit": "c447f0fea703fcd0fff57de5000947b5ca81286b",
+      "downloaded_utc": "2026-10-27T18:35:22.705028+00:00",
+      "files": [
+        {
+          "name": "sn.dat",
+          "url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES.dat",
+          "sha256": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
+          "bytes": 579283
+        },
+        {
+          "name": "sn.cov",
+          "url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES_STAT%2BSYS.cov",
+          "sha256": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
+          "bytes": 33284960
+        },
+        {
+          "name": "README.txt",
+          "url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/README",
+          "sha256": "e2b0d262757f01c1794a938c78d32600a21e289b2a0320e5c660c4c6fc9aa87e",
+          "bytes": 4056
+        }
+      ]
+    }
+  },
+  "source_hashes": {
+    "src/singularities.py": "872cbbe9d6773ea283a8026d567593d0599550c8d4e596524c15fc4e291829d6",
+    "src/models.py": "1379c577698d124b9b4add638c609560fcada3e15bb7b60066c2b7ba372f6e17",
+    "src/datasets.py": "207c4c4ee93e100de41a35b53a8e71db0a07e0e78a5272563d1d492388a51760",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/_checkpoints.py": "7edc61fe7feeb68ec6bb557f3b471064254871847a1414d016ff2ee6b3c08c55",
+    "src/classifiers.py": "c66cb84ab86a6fbfce434078ad2213d68eb5b3264d8fbba4c20f16fcc255d4be",
+    "src/parameter_space.py": "a2df64343ada02affa471b0e3d027a6d29f043d3df7c0cb0bdf23cbf8900b96d",
+    "src/barotropic_analysis.py": "7e94cc9150f7f8621e0189aa0f270b9ad349217322386acd292ef035e10ae460",
+    "src/_analytic.py": "7de21ebb7375732ae632d252f45a8a2a01ec113b182769b2183b0339cf2da1b9",
+    "src/observations/background.py": "25747ef7d60a9986012f14b59d44af886f341616d4fc573b7b51d56774bb6001",
+    "src/observations/__init__.py": "4c6332dc7776fcc737aec9421550b0ae2ce7dcbce09866281b640aac9d7cb061",
+    "src/observations/fitting.py": "5c39e036527df244dfd17ca12cfa35f5e6dbeb7ab4712ca3458d235c297410b5",
+    "src/observations/likelihood.py": "a5047cbbda85f80c7a2f0582ac6d9fcdaaa1205d960b07b129aa378d7e5f2f78",
+    "src/observations/data.py": "094b787c77a744f4d890f44ac04a69f799cdf01cd3f264e75b16342ad880ee9f"
+  }
+}

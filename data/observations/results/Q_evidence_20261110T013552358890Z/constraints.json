@@ -1,0 +1,6019 @@
+{
+  "status": "completed",
+  "parent_sha256": "759fa0eb56f0e5cb08dbb295df7c81c3a86662614b92c5667662b82e702a8d0b",
+  "source_hashes": {
+    "src/singularities.py": "872cbbe9d6773ea283a8026d567593d0599550c8d4e596524c15fc4e291829d6",
+    "src/models.py": "daff733298044b9029a0e5e674c8f3a749c6361f4e636e6ac833ad41f737a5df",
+    "src/datasets.py": "207c4c4ee93e100de41a35b53a8e71db0a07e0e78a5272563d1d492388a51760",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/_checkpoints.py": "7edc61fe7feeb68ec6bb557f3b471064254871847a1414d016ff2ee6b3c08c55",
+    "src/classifiers.py": "c66cb84ab86a6fbfce434078ad2213d68eb5b3264d8fbba4c20f16fcc255d4be",
+    "src/parameter_space.py": "a2df64343ada02affa471b0e3d027a6d29f043d3df7c0cb0bdf23cbf8900b96d",
+    "src/barotropic_analysis.py": "7e94cc9150f7f8621e0189aa0f270b9ad349217322386acd292ef035e10ae460",
+    "src/_analytic.py": "7de21ebb7375732ae632d252f45a8a2a01ec113b182769b2183b0339cf2da1b9",
+    "src/observations/background.py": "5bda1b5b45709db19f4671bc53f5d21ccfa948309644bdf86f13805445ece5f7",
+    "src/observations/__init__.py": "d5845e875b52dbc7909dc769d99bf9ad8bc71cc301f1fa4ae96fa32e74aec930",
+    "src/observations/fitting.py": "0c6becf809479953bbc53bed65cb1974998c445508bc9ea848a3e4104ad3299f",
+    "src/observations/inference.py": "37886a09f7212cbd16d0501b35304e2cc856507f4a0a24c3fd21c3fe5c211c2b",
+    "src/observations/constraints.py": "dc61cf19949e2d7fe03c04b78f0bc8394f7c253421dd8a4b80e1b695e4098f9d",
+    "src/observations/barotropic.py": "76b79a4e14aae05208166e25d7f2830c65f23067c4adfa3ee18bca0983059d7b",
+    "src/observations/likelihood.py": "a5047cbbda85f80c7a2f0582ac6d9fcdaaa1205d960b07b129aa378d7e5f2f78",
+    "src/observations/data.py": "9303dec9c1b3528ce31d4776c0747219318e087c950ba29f802f1a2d91ec7b27",
+    "/Users/macbook/Usach/Proyecto_Cosmologia_UG/cosmo_singularities/scripts/refine_Q_constraints.py": "0faff4303697b828713b578b77b8688eee446780c34c8b219ba4a73653d86b86"
+  },
+  "reconciled": {
+    "bao": {
+      "parameters": [
+        0.2990339570899178,
+        -0.9801719369343731,
+        -0.8,
+        -2.999999999999999
+      ],
+      "names": [
+        "omega_m",
+        "omega",
+        "alpha_bar",
+        "beta"
+      ],
+      "bounds": [
+        [
+          0.05,
+          0.6
+        ],
+        [
+          -1.8,
+          -0.3
+        ],
+        [
+          -0.8,
+          5.0
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "chi2": 8.970274499980913,
+      "chi2_bao": 8.970274499980913,
+      "chi2_sn": 0.0,
+      "H0_rd_km_s": 9956.19778239231,
+      "M_profile": null,
+      "search_chi2": 8.970274491307217,
+      "selected_method": "SLSQP",
+      "local_converged": true,
+      "grid_difference": 8.673696427763389e-09,
+      "refined_grid_difference": -5.571685335326038e-10,
+      "numerical_pass": true,
+      "D0": 3.3999999999999995,
+      "at_bound": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": false,
+          "message": "Maximum number of iterations has been exceeded.",
+          "chi2": 8.994075140989882
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 8.970274491307217
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 10.20311090541335
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 8.994061661457053
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 8.994061685165779
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 8.994061661609646
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 8.994062362102522
+        }
+      ],
+      "spec": {
+        "kind": "power",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": false,
+        "d_floor": 1e-05,
+        "phantom": false
+      }
+    },
+    "sn": {
+      "parameters": [
+        0.14918909684878448,
+        -0.30000000000000004,
+        2.0271486662209606,
+        -0.15975655045383386
+      ],
+      "names": [
+        "omega_m",
+        "omega",
+        "alpha_bar",
+        "beta"
+      ],
+      "bounds": [
+        [
+          0.05,
+          0.6
+        ],
+        [
+          -1.8,
+          -0.3
+        ],
+        [
+          -0.8,
+          5.0
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "chi2": 1402.394059204718,
+      "chi2_bao": 0.0,
+      "chi2_sn": 1402.394059204718,
+      "H0_rd_km_s": null,
+      "M_profile": -19.348825016316802,
+      "search_chi2": 1402.3940571488126,
+      "selected_method": "SLSQP",
+      "local_converged": true,
+      "grid_difference": 2.0559052700264147e-06,
+      "refined_grid_difference": 3.051400199183263e-08,
+      "numerical_pass": true,
+      "D0": 0.676149721827449,
+      "at_bound": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": false,
+          "message": "Maximum number of iterations has been exceeded.",
+          "chi2": 1402.4095283030865
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1402.3940572565668
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1402.3940572942931
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1402.3940572448923
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1402.424011474204
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1402.3940571488126
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1402.395464017885
+        }
+      ],
+      "spec": {
+        "kind": "power",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": false,
+        "d_floor": 1e-05,
+        "phantom": false
+      }
+    },
+    "joint": {
+      "parameters": [
+        0.29855909588353374,
+        -0.9820210933915767,
+        -0.8,
+        -2.999999999999998
+      ],
+      "names": [
+        "omega_m",
+        "omega",
+        "alpha_bar",
+        "beta"
+      ],
+      "bounds": [
+        [
+          0.05,
+          0.6
+        ],
+        [
+          -1.8,
+          -0.3
+        ],
+        [
+          -0.8,
+          5.0
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "chi2": 1411.4690840343364,
+      "chi2_bao": 8.982146387558839,
+      "chi2_sn": 1402.4869376467775,
+      "H0_rd_km_s": 9976.494705331985,
+      "M_profile": -19.347499850699098,
+      "search_chi2": 1411.469083207499,
+      "selected_method": "SLSQP",
+      "local_converged": true,
+      "grid_difference": 8.268375495390501e-07,
+      "refined_grid_difference": -1.3289991329656914e-09,
+      "numerical_pass": true,
+      "D0": 3.399999999999998,
+      "at_bound": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1411.4859714688184
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.469083207499
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1416.264892221896
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.4858849512004
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1411.4858907912335
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.4859197077299
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1411.4859193246075
+        }
+      ],
+      "spec": {
+        "kind": "power",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": false,
+        "d_floor": 1e-05,
+        "phantom": false
+      }
+    }
+  },
+  "beta_profiles": {
+    "-6.0": {
+      "positive": {
+        "parameters": [
+          0.29861450579593,
+          -0.9954968517389848,
+          -0.9499999999999998
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.466194440934,
+        "chi2_bao": 8.978951525863106,
+        "chi2_sn": 1402.487242915071,
+        "H0_rd_km_s": 9976.380704438941,
+        "M_profile": -19.347475498375676,
+        "search_chi2": 1411.4661936153293,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.256047294707969e-07,
+        "refined_grid_difference": -1.284433892578818e-09,
+        "numerical_pass": true,
+        "D0": 6.699999999999999,
+        "at_bound": [
+          false,
+          false,
+          true
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": false,
+            "message": "Maximum number of iterations has been exceeded.",
+            "chi2": 1411.466231538561
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4661936153293
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.466193616623
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4661936155237
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": -6.0,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      },
+      "negative_alpha_positive": {
+        "parameters": [
+          0.2993725014511101,
+          -0.8840916357345505,
+          0.1666703186529066
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.429900986274,
+        "chi2_bao": 8.943025496454633,
+        "chi2_sn": 1402.4868754898196,
+        "H0_rd_km_s": 9974.532194118206,
+        "M_profile": -19.346926918448872,
+        "search_chi2": 1411.4299000981705,
+        "selected_method": "Powell",
+        "local_converged": true,
+        "grid_difference": 8.881036137609044e-07,
+        "refined_grid_difference": 4.433786671143025e-09,
+        "numerical_pass": true,
+        "D0": -2.191191743960985e-05,
+        "at_bound": [
+          false,
+          false,
+          false
+        ],
+        "near_D_floor": true,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": false,
+            "message": "Maximum number of iterations has been exceeded.",
+            "chi2": 1411.4299316632373
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4299000982578
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4299000984076
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4299001020854
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4299000984067
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4300879194952
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4299000981705
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": -6.0,
+          "branch": "negative_alpha_positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      }
+    },
+    "-3.0": {
+      "positive": {
+        "parameters": [
+          0.2986087148092855,
+          -0.99549778446851,
+          -0.95
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.4665000290647,
+        "chi2_bao": 8.979291005908102,
+        "chi2_sn": 1402.4872090231565,
+        "H0_rd_km_s": 9976.393274255623,
+        "M_profile": -19.34747815694882,
+        "search_chi2": 1411.4664992033208,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.257438821601681e-07,
+        "refined_grid_difference": -1.27965904539451e-09,
+        "numerical_pass": true,
+        "D0": 3.8499999999999996,
+        "at_bound": [
+          false,
+          false,
+          true
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": false,
+            "message": "Maximum number of iterations has been exceeded.",
+            "chi2": 1411.4666516615594
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4664992033208
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4664992034554
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4664992034159
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": -3.0,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      },
+      "negative_alpha_positive": {
+        "parameters": [
+          0.2997477674454249,
+          -0.8613273127262611,
+          0.3333389715998054
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.4151790369137,
+        "chi2_bao": 8.927237791708698,
+        "chi2_sn": 1402.487941245205,
+        "H0_rd_km_s": 9973.712496213851,
+        "M_profile": -19.346662907138537,
+        "search_chi2": 1411.415178121626,
+        "selected_method": "Powell",
+        "local_converged": true,
+        "grid_difference": 9.152877282758709e-07,
+        "refined_grid_difference": 7.2441252996213734e-09,
+        "numerical_pass": true,
+        "D0": -1.6914799416234416e-05,
+        "at_bound": [
+          false,
+          false,
+          false
+        ],
+        "near_D_floor": true,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.448745700582
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4151781217563
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4151781218836
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.448717430492
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4487176183495
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4151781253838
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.415178121626
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": -3.0,
+          "branch": "negative_alpha_positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      }
+    },
+    "-2.0": {
+      "positive": {
+        "parameters": [
+          0.2986042096512081,
+          -0.9954984872782906,
+          -0.95
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.4667353597622,
+        "chi2_bao": 8.979552048064,
+        "chi2_sn": 1402.4871833116981,
+        "H0_rd_km_s": 9976.402755272245,
+        "M_profile": -19.34748016949408,
+        "search_chi2": 1411.466734533918,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.258441539510386e-07,
+        "refined_grid_difference": -1.3174030755180866e-09,
+        "numerical_pass": true,
+        "D0": 2.9,
+        "at_bound": [
+          false,
+          false,
+          true
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": false,
+            "message": "Maximum number of iterations has been exceeded.",
+            "chi2": 1411.467037054881
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4667345339412
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.466734533918
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4667345340492
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": -2.0,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      },
+      "negative_alpha_positive": {
+        "parameters": [
+          0.3000300835712368,
+          -0.8383248397264924,
+          0.5000089569136859
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.4056184793808,
+        "chi2_bao": 8.916637049265784,
+        "chi2_sn": 1402.488981430115,
+        "H0_rd_km_s": 9973.124291753846,
+        "M_profile": -19.34646135928925,
+        "search_chi2": 1411.4056175411035,
+        "selected_method": "Powell",
+        "local_converged": true,
+        "grid_difference": 9.382772532262607e-07,
+        "refined_grid_difference": 9.570840120431967e-09,
+        "numerical_pass": true,
+        "D0": -1.7913827371707214e-05,
+        "at_bound": [
+          false,
+          false,
+          false
+        ],
+        "near_D_floor": true,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": false,
+            "message": "Maximum number of iterations has been exceeded.",
+            "chi2": 1411.4056479440571
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.405617541164
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4056175412977
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.405617541592
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4056175415108
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4056175414094
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4056175411035
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": -2.0,
+          "branch": "negative_alpha_positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      }
+    },
+    "-1.0": {
+      "positive": {
+        "parameters": [
+          0.298595394424121,
+          -0.9954998581661076,
+          -0.95
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.4671999773277,
+        "chi2_bao": 8.980065849197235,
+        "chi2_sn": 1402.4871341281305,
+        "H0_rd_km_s": 9976.420382239094,
+        "M_profile": -19.347484068646246,
+        "search_chi2": 1411.4671991512835,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.260442427854287e-07,
+        "refined_grid_difference": -1.3069438864476979e-09,
+        "numerical_pass": true,
+        "D0": 1.95,
+        "at_bound": [
+          false,
+          false,
+          true
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": false,
+            "message": "Maximum number of iterations has been exceeded.",
+            "chi2": 1411.4689503893937
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4671991512835
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4671991514504
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4671991514263
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": -1.0,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      },
+      "negative_alpha_positive": {
+        "parameters": [
+          0.3006416658533677,
+          -0.7659585625783292,
+          1.000010890940326
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.3897563571184,
+        "chi2_bao": 8.898097461646724,
+        "chi2_sn": 1402.4916588954716,
+        "H0_rd_km_s": 9971.928521721944,
+        "M_profile": -19.346012266758017,
+        "search_chi2": 1411.3897553583693,
+        "selected_method": "Powell",
+        "local_converged": true,
+        "grid_difference": 9.987491011997918e-07,
+        "refined_grid_difference": 1.571174834680278e-08,
+        "numerical_pass": true,
+        "D0": -1.089094032602489e-05,
+        "at_bound": [
+          false,
+          false,
+          false
+        ],
+        "near_D_floor": true,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": false,
+            "message": "Maximum number of iterations has been exceeded.",
+            "chi2": 1411.3897558271365
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.3897553584145
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.389755358617
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.3897553644788
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.3897553584786
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.389755359813
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.3897553583693
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": -1.0,
+          "branch": "negative_alpha_positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      }
+    },
+    "-0.5": {
+      "positive": {
+        "parameters": [
+          0.2985867078831858,
+          -0.9955012250523114,
+          -0.95
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.4676567216766,
+        "chi2_bao": 8.980571732740234,
+        "chi2_sn": 1402.4870849889364,
+        "H0_rd_km_s": 9976.438677957658,
+        "M_profile": -19.347487973369496,
+        "search_chi2": 1411.4676558954343,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.262422852567397e-07,
+        "refined_grid_difference": -1.2878444977104664e-09,
+        "numerical_pass": true,
+        "D0": 1.475,
+        "at_bound": [
+          false,
+          false,
+          true
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": false,
+            "message": "Maximum number of iterations has been exceeded.",
+            "chi2": 1411.467806301115
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4676558954343
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4676558955148
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4676558954502
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": -0.5,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      },
+      "negative_alpha_positive": {
+        "parameters": [
+          0.3014412485362874,
+          -0.6040425830822178,
+          2.0000303589152555
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.380139909079,
+        "chi2_bao": 8.884896702231892,
+        "chi2_sn": 1402.4952432068471,
+        "H0_rd_km_s": 9970.51297335902,
+        "M_profile": -19.345390788103092,
+        "search_chi2": 1411.3801387962717,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 1.1128072401334066e-06,
+        "refined_grid_difference": 2.6345333026256412e-08,
+        "numerical_pass": true,
+        "D0": -1.5179457627745307e-05,
+        "at_bound": [
+          false,
+          false,
+          false
+        ],
+        "near_D_floor": true,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": false,
+            "message": "Maximum number of iterations has been exceeded.",
+            "chi2": 1411.3802535149725
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.3801387962717
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.3801387965375
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.3801388270388
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.380138798371
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.386520555691
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.3801387964686
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": -0.5,
+          "branch": "negative_alpha_positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      }
+    },
+    "0.0": {
+      "positive": {
+        "parameters": [
+          0.2985697791790332,
+          -0.9955038640015919,
+          -0.95
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.46854743822,
+        "chi2_bao": 8.981556338924271,
+        "chi2_sn": 1402.4869910992957,
+        "H0_rd_km_s": 9976.47363728126,
+        "M_profile": -19.347495510468505,
+        "search_chi2": 1411.46854661163,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.265899396064924e-07,
+        "refined_grid_difference": -1.326725396211259e-09,
+        "numerical_pass": true,
+        "D0": 1.0,
+        "at_bound": [
+          false,
+          false,
+          true
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": false,
+            "message": "Maximum number of iterations has been exceeded.",
+            "chi2": 1411.4693794827579
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4685466117141
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4685477834519
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.46854661163
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4692159240185
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4685466122269
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.470412763164
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": 0.0,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      }
+    },
+    "0.5": {
+      "positive": {
+        "parameters": [
+          0.2985224362972392,
+          -0.9955112349690314,
+          -0.95
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.4710513078571,
+        "chi2_bao": 8.98431542161855,
+        "chi2_sn": 1402.4867358862386,
+        "H0_rd_km_s": 9976.570811772954,
+        "M_profile": -19.34751655572135,
+        "search_chi2": 1411.4710504801512,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.277058896055678e-07,
+        "refined_grid_difference": -1.295347829000093e-09,
+        "numerical_pass": true,
+        "D0": 0.525,
+        "at_bound": [
+          false,
+          false,
+          true
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": false,
+            "message": "Maximum number of iterations has been exceeded.",
+            "chi2": 1411.471863288097
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4710504801512
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.471051676803
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4710504801958
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4711551568132
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.471050480631
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.47247332039
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": 0.5,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      }
+    },
+    "1.0": {
+      "positive": {
+        "parameters": [
+          0.29752640798426644,
+          -0.9130614615047756,
+          0.0
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.5254758017754,
+        "chi2_bao": 9.041686246759603,
+        "chi2_sn": 1402.4837895550158,
+        "H0_rd_km_s": 9978.723628688173,
+        "M_profile": -19.347948176922785,
+        "search_chi2": 1411.5254749542469,
+        "selected_method": "supplied",
+        "local_converged": false,
+        "grid_difference": 8.475285540043842e-07,
+        "refined_grid_difference": -1.3174030755180866e-09,
+        "numerical_pass": true,
+        "D0": 1.0,
+        "at_bound": [
+          false,
+          false,
+          false
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.5254766666885
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.5254749542867
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.5254749543258
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.5254749542867
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.5254749543258
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.5254749645667
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.5254749548578
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": 1.0,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      }
+    },
+    "1.5": {
+      "positive": {
+        "parameters": [
+          0.29791665327173794,
+          0.49310105594196996,
+          15.986201467127625
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.5043564554464,
+        "chi2_bao": 9.020015383531064,
+        "chi2_sn": 1402.4843410719154,
+        "H0_rd_km_s": 9977.891126010549,
+        "M_profile": -19.347789737713683,
+        "search_chi2": 1411.5043556145845,
+        "selected_method": "Powell",
+        "local_converged": true,
+        "grid_difference": 8.408619578403886e-07,
+        "refined_grid_difference": -1.2719283404294401e-09,
+        "numerical_pass": true,
+        "D0": 24.979302200691436,
+        "at_bound": [
+          false,
+          true,
+          false
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.504419938024
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.5043556632377
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.5043556145845
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.5044126186103
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.5044130968784
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.5048137386257
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.5044589654005
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": 1.5,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      },
+      "negative_alpha_negative": {
+        "parameters": [
+          0.29949147385400593,
+          -0.9850132099414779,
+          -0.8365615777709623
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.4310607114264,
+        "chi2_bao": 8.939594618628423,
+        "chi2_sn": 1402.491466092798,
+        "H0_rd_km_s": 9975.367603859448,
+        "M_profile": -19.347209239675816,
+        "search_chi2": 1411.4310599008002,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.106262612272985e-07,
+        "refined_grid_difference": -1.2839791452279314e-09,
+        "numerical_pass": true,
+        "D0": -0.25484236665644344,
+        "at_bound": [
+          false,
+          false,
+          false
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4310599008002
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": false,
+            "message": "Inequality constraints incompatible",
+            "chi2": 1415.5939053212758
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": 1.5,
+          "branch": "negative_alpha_negative",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      }
+    },
+    "2.0": {
+      "positive": {
+        "parameters": [
+          0.29810217101686365,
+          0.49964095300002986,
+          15.961106653796989
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.494202509925,
+        "chi2_bao": 9.009344468181101,
+        "chi2_sn": 1402.4848580417438,
+        "H0_rd_km_s": 9977.48730945667,
+        "M_profile": -19.347710058296016,
+        "search_chi2": 1411.4942016726288,
+        "selected_method": "Powell",
+        "local_converged": true,
+        "grid_difference": 8.372960564884124e-07,
+        "refined_grid_difference": -1.305124897044152e-09,
+        "numerical_pass": true,
+        "D0": 32.92221330759398,
+        "at_bound": [
+          false,
+          true,
+          false
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4943207748674
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4942018021243
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4942016726288
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4943168759673
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4943170497986
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4942018024308
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4950579578465
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": 2.0,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      },
+      "negative_alpha_negative": {
+        "parameters": [
+          0.2993668985788526,
+          -0.9763071053036021,
+          -0.7407868221250538
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.4363701086725,
+        "chi2_bao": 8.945692371370905,
+        "chi2_sn": 1402.4906777373017,
+        "H0_rd_km_s": 9975.525920588374,
+        "M_profile": -19.347252238091937,
+        "search_chi2": 1411.4363692954878,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.131846698233858e-07,
+        "refined_grid_difference": -1.2928467185702175e-09,
+        "numerical_pass": true,
+        "D0": -0.4815736442501075,
+        "at_bound": [
+          false,
+          false,
+          false
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4363692956292
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4363692954878
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": 2.0,
+          "branch": "negative_alpha_negative",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      }
+    },
+    "3.0": {
+      "positive": {
+        "parameters": [
+          0.29828027437689786,
+          0.4998958664967006,
+          15.861283225971395
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.484371193855,
+        "chi2_bao": 8.998849503404074,
+        "chi2_sn": 1402.485521690451,
+        "H0_rd_km_s": 9977.101806045439,
+        "M_profile": -19.34763049822798,
+        "search_chi2": 1411.484370360295,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.335598522535292e-07,
+        "refined_grid_difference": -1.3064891390968114e-09,
+        "numerical_pass": true,
+        "D0": 48.58384967791419,
+        "at_bound": [
+          false,
+          true,
+          false
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4843914421547
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.484370360295
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4843703849892
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.484389984519
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.484391058304
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4843709284974
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4843705043488
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": 3.0,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      },
+      "negative_alpha_negative": {
+        "parameters": [
+          0.29921330538528845,
+          -0.9663142862928629,
+          -0.6300921113846877
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.442836893955,
+        "chi2_bao": 8.953044355955853,
+        "chi2_sn": 1402.4897925379992,
+        "H0_rd_km_s": 9975.717974771385,
+        "M_profile": -19.34730339575526,
+        "search_chi2": 1411.4428360778406,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.161143796314718e-07,
+        "refined_grid_difference": -1.3108092389302328e-09,
+        "numerical_pass": true,
+        "D0": -0.8902763341540632,
+        "at_bound": [
+          false,
+          false,
+          false
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4428360778882
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4428360778406
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": 3.0,
+          "branch": "negative_alpha_negative",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      }
+    },
+    "6.0": {
+      "positive": {
+        "parameters": [
+          0.29845416369012673,
+          0.49999984317649915,
+          15.757658359319858
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.4748887494436,
+        "chi2_bao": 8.988551723181315,
+        "chi2_sn": 1402.4863370262624,
+        "H0_rd_km_s": 9976.724717145347,
+        "M_profile": -19.347551084462665,
+        "search_chi2": 1411.4748879198282,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.296153737319401e-07,
+        "refined_grid_difference": -1.30216903926339e-09,
+        "numerical_pass": true,
+        "D0": 95.54595015591914,
+        "at_bound": [
+          false,
+          true,
+          false
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.47494770604
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4748879198282
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4748879204308
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4748930084131
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4748919884357
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4749419642937
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4748880478328
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": 6.0,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      },
+      "negative_alpha_negative": {
+        "parameters": [
+          0.2990060913268121,
+          -0.9541019669616011,
+          -0.49370129220437864
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "alpha_bar"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -0.95,
+            20.0
+          ]
+        ],
+        "chi2": 1411.4513573486033,
+        "chi2_bao": 8.962612671298121,
+        "chi2_sn": 1402.4887446773052,
+        "H0_rd_km_s": 9975.969623095958,
+        "M_profile": -19.347368813381042,
+        "search_chi2": 1411.4513565288196,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.197837360057747e-07,
+        "refined_grid_difference": -1.2755663192365319e-09,
+        "numerical_pass": true,
+        "D0": -1.9622077532262718,
+        "at_bound": [
+          false,
+          false,
+          false
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": false,
+            "message": "Inequality constraints incompatible",
+            "chi2": 1416.3972019516332
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4513565288196
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": 6.0,
+          "branch": "negative_alpha_negative",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        }
+      }
+    }
+  },
+  "omega_profiles": {
+    "-1.2": {
+      "parameters": [
+        0.3175141771907077
+      ],
+      "names": [
+        "omega_m"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ]
+      ],
+      "chi2": 1458.094160961639,
+      "chi2_bao": 29.415392066261642,
+      "chi2_sn": 1428.6787688953775,
+      "H0_rd_km_s": 10328.441574042536,
+      "M_profile": -19.38666594905022,
+      "search_chi2": 1458.0941598151853,
+      "selected_method": "Powell",
+      "local_converged": true,
+      "grid_difference": 1.1464537692518206e-06,
+      "refined_grid_difference": 6.327809387585148e-10,
+      "numerical_pass": true,
+      "D0": 1.0,
+      "at_bound": [
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1458.0941632900024
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1458.0941598152149
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1458.0941598152629
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1458.0941598152817
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1458.0941598151853
+        }
+      ],
+      "spec": {
+        "kind": "noQ",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": true,
+        "d_floor": 1e-05,
+        "phantom": false
+      },
+      "fixed_parameter": {
+        "omega": -1.2
+      }
+    },
+    "-1.1": {
+      "parameters": [
+        0.31099059953474667
+      ],
+      "names": [
+        "omega_m"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ]
+      ],
+      "chi2": 1432.1166050578843,
+      "chi2_bao": 17.590669866518162,
+      "chi2_sn": 1414.5259351913662,
+      "H0_rd_km_s": 10225.112475506188,
+      "M_profile": -19.37384746733069,
+      "search_chi2": 1432.116604030206,
+      "selected_method": "Powell",
+      "local_converged": true,
+      "grid_difference": 1.027678308673785e-06,
+      "refined_grid_difference": -2.637534635141492e-10,
+      "numerical_pass": true,
+      "D0": 1.0,
+      "at_bound": [
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1432.1166043892601
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1432.1166040302392
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1432.1166040302505
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1432.1166040302412
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1432.116604030206
+        }
+      ],
+      "spec": {
+        "kind": "noQ",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": true,
+        "d_floor": 1e-05,
+        "phantom": false
+      },
+      "fixed_parameter": {
+        "omega": -1.1
+      }
+    },
+    "-1.0": {
+      "parameters": [
+        0.3042142115619468
+      ],
+      "names": [
+        "omega_m"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ]
+      ],
+      "chi2": 1416.1391728818346,
+      "chi2_bao": 10.869901331721252,
+      "chi2_sn": 1405.2692715501134,
+      "H0_rd_km_s": 10101.29903550869,
+      "M_profile": -19.36025147713957,
+      "search_chi2": 1416.1391719570772,
+      "selected_method": "Powell",
+      "local_converged": true,
+      "grid_difference": 9.247573871107306e-07,
+      "refined_grid_difference": -9.538325684843585e-10,
+      "numerical_pass": true,
+      "D0": 1.0,
+      "at_bound": [
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1416.1391721604637
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1416.1391719571006
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1416.1391719572064
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1416.1391719570943
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1416.1391719570772
+        }
+      ],
+      "spec": {
+        "kind": "noQ",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": true,
+        "d_floor": 1e-05,
+        "phantom": false
+      },
+      "fixed_parameter": {
+        "omega": -1.0
+      }
+    },
+    "-0.98": {
+      "parameters": [
+        0.30276755123995897
+      ],
+      "names": [
+        "omega_m"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ]
+      ],
+      "chi2": 1414.2780027532144,
+      "chi2_bao": 10.12348720324618,
+      "chi2_sn": 1404.1545155499682,
+      "H0_rd_km_s": 10074.257226806669,
+      "M_profile": -19.357455337603703,
+      "search_chi2": 1414.2780018472477,
+      "selected_method": "Powell",
+      "local_converged": true,
+      "grid_difference": 9.05966771824751e-07,
+      "refined_grid_difference": -1.0231815394945443e-09,
+      "numerical_pass": true,
+      "D0": 1.0,
+      "at_bound": [
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1414.27800247437
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1414.2780018473163
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1414.2780018474323
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1414.2780018474125
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1414.2780018472477
+        }
+      ],
+      "spec": {
+        "kind": "noQ",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": true,
+        "d_floor": 1e-05,
+        "phantom": false
+      },
+      "fixed_parameter": {
+        "omega": -0.98
+      }
+    },
+    "-0.96": {
+      "parameters": [
+        0.3012732278593008
+      ],
+      "names": [
+        "omega_m"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ]
+      ],
+      "chi2": 1412.8871836373944,
+      "chi2_bao": 9.572905218352581,
+      "chi2_sn": 1403.3142784190418,
+      "H0_rd_km_s": 10046.504976646278,
+      "M_profile": -19.35463738374633,
+      "search_chi2": 1412.8871827495834,
+      "selected_method": "Powell",
+      "local_converged": true,
+      "grid_difference": 8.87810983840609e-07,
+      "refined_grid_difference": -1.1075371730839834e-09,
+      "numerical_pass": true,
+      "D0": 1.0,
+      "at_bound": [
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1412.8871828046526
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1412.8871827496193
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1412.8871827498758
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1412.8871827497887
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1412.8871827495834
+        }
+      ],
+      "spec": {
+        "kind": "noQ",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": true,
+        "d_floor": 1e-05,
+        "phantom": false
+      },
+      "fixed_parameter": {
+        "omega": -0.96
+      }
+    },
+    "-0.94": {
+      "parameters": [
+        0.2997223137687598
+      ],
+      "names": [
+        "omega_m"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ]
+      ],
+      "chi2": 1411.9766124835776,
+      "chi2_bao": 9.216704998964182,
+      "chi2_sn": 1402.7599074846134,
+      "H0_rd_km_s": 10018.06664809876,
+      "M_profile": -19.351799358843714,
+      "search_chi2": 1411.9766116133271,
+      "selected_method": "Powell",
+      "local_converged": true,
+      "grid_difference": 8.702504601387773e-07,
+      "refined_grid_difference": -1.2114469427615404e-09,
+      "numerical_pass": true,
+      "D0": 1.0,
+      "at_bound": [
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1411.9766210222863
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.9766116133817
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1411.976611613514
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.9766116136634
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1411.9766116133271
+        }
+      ],
+      "spec": {
+        "kind": "noQ",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": true,
+        "d_floor": 1e-05,
+        "phantom": false
+      },
+      "fixed_parameter": {
+        "omega": -0.94
+      }
+    },
+    "-0.92": {
+      "parameters": [
+        0.2981049593547639
+      ],
+      "names": [
+        "omega_m"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ]
+      ],
+      "chi2": 1411.5555730021833,
+      "chi2_bao": 9.053477038066468,
+      "chi2_sn": 1402.502095964117,
+      "H0_rd_km_s": 9988.968162414465,
+      "M_profile": -19.34894305268272,
+      "search_chi2": 1411.5555721489668,
+      "selected_method": "Powell",
+      "local_converged": true,
+      "grid_difference": 8.532165338692721e-07,
+      "refined_grid_difference": -1.2407781468937173e-09,
+      "numerical_pass": true,
+      "D0": 1.0,
+      "at_bound": [
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1411.5555732104228
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.555572148969
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1411.5555721490584
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.5555721490127
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1411.5555721489668
+        }
+      ],
+      "spec": {
+        "kind": "noQ",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": true,
+        "d_floor": 1e-05,
+        "phantom": false
+      },
+      "fixed_parameter": {
+        "omega": -0.92
+      }
+    },
+    "-0.9": {
+      "parameters": [
+        0.2964104222572395
+      ],
+      "names": [
+        "omega_m"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ]
+      ],
+      "chi2": 1411.632692000354,
+      "chi2_bao": 9.081866557579417,
+      "chi2_sn": 1402.5508254427746,
+      "H0_rd_km_s": 9959.236050811047,
+      "M_profile": -19.346070261966325,
+      "search_chi2": 1411.6326911634571,
+      "selected_method": "Powell",
+      "local_converged": true,
+      "grid_difference": 8.368967883143341e-07,
+      "refined_grid_difference": -1.3662884157383814e-09,
+      "numerical_pass": true,
+      "D0": 1.0,
+      "at_bound": [
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1411.6326944144828
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.6326911634824
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1411.6326911634571
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.6326911635183
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1411.6326911635358
+        }
+      ],
+      "spec": {
+        "kind": "noQ",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": true,
+        "d_floor": 1e-05,
+        "phantom": false
+      },
+      "fixed_parameter": {
+        "omega": -0.9
+      }
+    },
+    "-0.88": {
+      "parameters": [
+        0.29462677803448745
+      ],
+      "names": [
+        "omega_m"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ]
+      ],
+      "chi2": 1412.2158967666187,
+      "chi2_bao": 9.300578394849147,
+      "chi2_sn": 1402.9153183717694,
+      "H0_rd_km_s": 9928.898739489128,
+      "M_profile": -19.343182843805675,
+      "search_chi2": 1412.2158959455642,
+      "selected_method": "SLSQP",
+      "local_converged": true,
+      "grid_difference": 8.210545274778269e-07,
+      "refined_grid_difference": -1.413809513906017e-09,
+      "numerical_pass": true,
+      "D0": 1.0,
+      "at_bound": [
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1412.289078119429
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1412.2158959456258
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1412.2158959455674
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1412.2158959455642
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1412.2158959455674
+        }
+      ],
+      "spec": {
+        "kind": "noQ",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": true,
+        "d_floor": 1e-05,
+        "phantom": false
+      },
+      "fixed_parameter": {
+        "omega": -0.88
+      }
+    },
+    "-0.86": {
+      "parameters": [
+        0.29274094828402825
+      ],
+      "names": [
+        "omega_m"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ]
+      ],
+      "chi2": 1413.3123737797935,
+      "chi2_bao": 9.708387741539745,
+      "chi2_sn": 1403.6039860382537,
+      "H0_rd_km_s": 9897.985410716692,
+      "M_profile": -19.340282668386404,
+      "search_chi2": 1413.3123729738866,
+      "selected_method": "SLSQP",
+      "local_converged": true,
+      "grid_difference": 8.059068932197988e-07,
+      "refined_grid_difference": -1.435410013073124e-09,
+      "numerical_pass": true,
+      "D0": 1.0,
+      "at_bound": [
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1413.3123871720272
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1413.3123729738866
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1413.3123729739098
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1413.3123729739439
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1413.3123729739098
+        }
+      ],
+      "spec": {
+        "kind": "noQ",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": true,
+        "d_floor": 1e-05,
+        "phantom": false
+      },
+      "fixed_parameter": {
+        "omega": -0.86
+      }
+    },
+    "-0.84": {
+      "parameters": [
+        0.2907384339800068
+      ],
+      "names": [
+        "omega_m"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ]
+      ],
+      "chi2": 1414.9285290198115,
+      "chi2_bao": 10.304155120841035,
+      "chi2_sn": 1404.6243738989706,
+      "H0_rd_km_s": 9866.526851289444,
+      "M_profile": -19.337371653948708,
+      "search_chi2": 1414.9285282284432,
+      "selected_method": "SLSQP",
+      "local_converged": true,
+      "grid_difference": 7.913683930382831e-07,
+      "refined_grid_difference": -1.532498572487384e-09,
+      "numerical_pass": true,
+      "D0": 1.0,
+      "at_bound": [
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1414.92852822857
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1414.9285282284432
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1414.9285282284704
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1414.9285282285132
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1414.9285282284704
+        }
+      ],
+      "spec": {
+        "kind": "noQ",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": true,
+        "d_floor": 1e-05,
+        "phantom": false
+      },
+      "fixed_parameter": {
+        "omega": -0.84
+      }
+    },
+    "-0.82": {
+      "parameters": [
+        0.28860339699508963
+      ],
+      "names": [
+        "omega_m"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ]
+      ],
+      "chi2": 1417.0699501649192,
+      "chi2_bao": 11.086803890979002,
+      "chi2_sn": 1405.9831462739403,
+      "H0_rd_km_s": 9834.553759755854,
+      "M_profile": -19.334451697832034,
+      "search_chi2": 1417.0699493875736,
+      "selected_method": "SLSQP",
+      "local_converged": true,
+      "grid_difference": 7.773455763526727e-07,
+      "refined_grid_difference": -1.5636487660231069e-09,
+      "numerical_pass": true,
+      "D0": 1.0,
+      "at_bound": [
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1417.0699497690525
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1417.0699493875745
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1417.0699493875854
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1417.0699493875736
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1417.0699493875854
+        }
+      ],
+      "spec": {
+        "kind": "noQ",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": true,
+        "d_floor": 1e-05,
+        "phantom": false
+      },
+      "fixed_parameter": {
+        "omega": -0.82
+      }
+    },
+    "-0.8": {
+      "parameters": [
+        0.28631817982370295
+      ],
+      "names": [
+        "omega_m"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ]
+      ],
+      "chi2": 1419.7413709590462,
+      "chi2_bao": 12.055358994228454,
+      "chi2_sn": 1407.6860119648177,
+      "H0_rd_km_s": 9802.098740519083,
+      "M_profile": -19.33152475799172,
+      "search_chi2": 1419.7413701950406,
+      "selected_method": "Powell",
+      "local_converged": true,
+      "grid_difference": 7.640055628144182e-07,
+      "refined_grid_difference": -1.6241301636910066e-09,
+      "numerical_pass": true,
+      "D0": 1.0,
+      "at_bound": [
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1419.7413702404763
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1419.7413701950566
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1419.7413701950406
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1419.741370195357
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1419.7413701950406
+        }
+      ],
+      "spec": {
+        "kind": "noQ",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": true,
+        "d_floor": 1e-05,
+        "phantom": false
+      },
+      "fixed_parameter": {
+        "omega": -0.8
+      }
+    },
+    "-0.75": {
+      "parameters": [
+        0.27981507200243105
+      ],
+      "names": [
+        "omega_m"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ]
+      ],
+      "chi2": 1428.7616500117633,
+      "chi2_bao": 15.28439652836903,
+      "chi2_sn": 1413.4772534833944,
+      "H0_rd_km_s": 9719.071021554666,
+      "M_profile": -19.324189727317595,
+      "search_chi2": 1428.761649278458,
+      "selected_method": "SLSQP",
+      "local_converged": true,
+      "grid_difference": 7.333053417823976e-07,
+      "refined_grid_difference": -1.7541879060445353e-09,
+      "numerical_pass": true,
+      "D0": 1.0,
+      "at_bound": [
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1428.76164968713
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1428.761649278458
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1428.7616492784646
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1428.7616492785337
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1428.7616492784646
+        }
+      ],
+      "spec": {
+        "kind": "noQ",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": true,
+        "d_floor": 1e-05,
+        "phantom": false
+      },
+      "fixed_parameter": {
+        "omega": -0.75
+      }
+    },
+    "-0.7": {
+      "parameters": [
+        0.27187855357963725
+      ],
+      "names": [
+        "omega_m"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ]
+      ],
+      "chi2": 1441.150433337315,
+      "chi2_bao": 19.657973427192143,
+      "chi2_sn": 1421.4924599101228,
+      "H0_rd_km_s": 9633.770313001685,
+      "M_profile": -19.316854072727573,
+      "search_chi2": 1441.1504326308313,
+      "selected_method": "SLSQP",
+      "local_converged": true,
+      "grid_difference": 7.064836609060876e-07,
+      "refined_grid_difference": -1.8105765775544569e-09,
+      "numerical_pass": true,
+      "D0": 1.0,
+      "at_bound": [
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1441.1504326894456
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1441.1504326308598
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1441.1504326308536
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1441.1504326308313
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1441.1504326308536
+        }
+      ],
+      "spec": {
+        "kind": "noQ",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": true,
+        "d_floor": 1e-05,
+        "phantom": false
+      },
+      "fixed_parameter": {
+        "omega": -0.7
+      }
+    }
+  },
+  "alpha_profiles": {
+    "-0.95": {
+      "positive": {
+        "parameters": [
+          0.29861471820984803,
+          -0.9954968934261119,
+          -6.0
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "beta"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -6.0,
+            6.0
+          ]
+        ],
+        "chi2": 1411.466194441503,
+        "chi2_bao": 8.978951632569713,
+        "chi2_sn": 1402.4872428089332,
+        "H0_rd_km_s": 9976.380687305236,
+        "M_profile": -19.347475568358423,
+        "search_chi2": 1411.4661936158889,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.256140517914901e-07,
+        "refined_grid_difference": -1.30216903926339e-09,
+        "numerical_pass": true,
+        "D0": 6.699999999999999,
+        "at_bound": [
+          false,
+          false,
+          true
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4662297941288
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.466193620138
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4661936364912
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4661936158889
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": null,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        },
+        "fixed_parameter": {
+          "alpha_bar": -0.95
+        }
+      },
+      "negative_alpha_negative": {
+        "parameters": [
+          0.2996333861000717,
+          -0.9953982064341358,
+          1.1217682498831891
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "beta"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -6.0,
+            6.0
+          ]
+        ],
+        "chi2": 1411.4250750657066,
+        "chi2_bao": 8.932671800635223,
+        "chi2_sn": 1402.4924032650713,
+        "H0_rd_km_s": 9975.201787658869,
+        "M_profile": -19.347160824451496,
+        "search_chi2": 1411.4250742580678,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.076387985056499e-07,
+        "refined_grid_difference": -1.2655618775170296e-09,
+        "numerical_pass": true,
+        "D0": -0.06567983738902972,
+        "at_bound": [
+          false,
+          false,
+          false
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4250742582533
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4250742580678
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": null,
+          "branch": "negative_alpha_negative",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        },
+        "fixed_parameter": {
+          "alpha_bar": -0.95
+        }
+      }
+    },
+    "-0.8": {
+      "positive": {
+        "parameters": [
+          0.29858514083859244,
+          -0.9820051195356632,
+          -6.0
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "beta"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -6.0,
+            6.0
+          ]
+        ],
+        "chi2": 1411.4677189309582,
+        "chi2_bao": 8.98063873416097,
+        "chi2_sn": 1402.4870801967973,
+        "H0_rd_km_s": 9976.440930381006,
+        "M_profile": -19.347488339156513,
+        "search_chi2": 1411.4677181047014,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.262568371719681e-07,
+        "refined_grid_difference": -1.2880718713859096e-09,
+        "numerical_pass": true,
+        "D0": 5.800000000000001,
+        "at_bound": [
+          false,
+          false,
+          true
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4677403919504
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4677181047261
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.46771810572
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4677181047014
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4780712348665
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": null,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        },
+        "fixed_parameter": {
+          "alpha_bar": -0.8
+        }
+      },
+      "negative_alpha_negative": {
+        "parameters": [
+          0.29945580416944007,
+          -0.9816908698698104,
+          1.6619683060947903
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "beta"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -6.0,
+            6.0
+          ]
+        ],
+        "chi2": 1411.4330399225628,
+        "chi2_bao": 8.94195507365221,
+        "chi2_sn": 1402.4910848489105,
+        "H0_rd_km_s": 9975.479346004575,
+        "M_profile": -19.347230109034932,
+        "search_chi2": 1411.4330391109625,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.116003300528973e-07,
+        "refined_grid_difference": -1.291482476517558e-09,
+        "numerical_pass": true,
+        "D0": -0.3295746448758323,
+        "at_bound": [
+          false,
+          false,
+          false
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4330391110168
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4330391109625
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": null,
+          "branch": "negative_alpha_negative",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        },
+        "fixed_parameter": {
+          "alpha_bar": -0.8
+        }
+      }
+    },
+    "-0.4": {
+      "positive": {
+        "parameters": [
+          0.2984132179924838,
+          -0.9462877383085937,
+          -6.0
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "beta"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -6.0,
+            6.0
+          ]
+        ],
+        "chi2": 1411.4763682792986,
+        "chi2_bao": 8.9901016958137,
+        "chi2_sn": 1402.4862665834848,
+        "H0_rd_km_s": 9976.782013456263,
+        "M_profile": -19.347558555942182,
+        "search_chi2": 1411.476367449746,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.295526185975177e-07,
+        "refined_grid_difference": -1.3108092389302328e-09,
+        "numerical_pass": true,
+        "D0": 3.4000000000000004,
+        "at_bound": [
+          false,
+          false,
+          true
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4763805503515
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.476367449746
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.476367461097
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.476367449828
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.547199258939
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": null,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        },
+        "fixed_parameter": {
+          "alpha_bar": -0.4
+        }
+      },
+      "negative_alpha_negative": {
+        "parameters": [
+          0.30120823262237506,
+          -0.9709366284358274,
+          5.999266012835271
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "beta"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -6.0,
+            6.0
+          ]
+        ],
+        "chi2": 1412.4559848115684,
+        "chi2_bao": 9.402877478804475,
+        "chi2_sn": 1403.053107332764,
+        "H0_rd_km_s": 10035.36728602884,
+        "M_profile": -19.35342007960306,
+        "search_chi2": 1412.4559839390345,
+        "selected_method": "SLSQP",
+        "local_converged": false,
+        "grid_difference": 8.725339739612537e-07,
+        "refined_grid_difference": -1.1527845344971865e-09,
+        "numerical_pass": true,
+        "D0": -1.3997064051341086,
+        "at_bound": [
+          false,
+          false,
+          true
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": false,
+            "message": "Maximum number of iterations has been exceeded.",
+            "chi2": 1412.4564673482878
+          },
+          {
+            "method": "SLSQP",
+            "success": false,
+            "message": "Inequality constraints incompatible",
+            "chi2": 1412.4559839390345
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": false,
+            "message": "Inequality constraints incompatible",
+            "chi2": 1416.2390161512774
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": false,
+            "message": "Inequality constraints incompatible",
+            "chi2": 1416.2066195116427
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": null,
+          "branch": "negative_alpha_negative",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        },
+        "fixed_parameter": {
+          "alpha_bar": -0.4
+        }
+      }
+    },
+    "0.0": {
+      "positive": {
+        "parameters": [
+          0.29752638240315377,
+          -0.9130612059701857,
+          0.0
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "beta"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -6.0,
+            6.0
+          ]
+        ],
+        "chi2": 1411.5254758017622,
+        "chi2_bao": 9.041686255593806,
+        "chi2_sn": 1402.4837895461685,
+        "H0_rd_km_s": 9978.723279576314,
+        "M_profile": -19.347948141473807,
+        "search_chi2": 1411.5254749542717,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.474905826005852e-07,
+        "refined_grid_difference": -1.3160388334654272e-09,
+        "numerical_pass": true,
+        "D0": 1.0,
+        "at_bound": [
+          false,
+          false,
+          false
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.5254966987989
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.5254749544076
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.5254756187585
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.5254749542717
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.6606278509335
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": null,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        },
+        "fixed_parameter": {
+          "alpha_bar": 0.0
+        }
+      }
+    },
+    "0.25": {
+      "positive": {
+        "parameters": [
+          0.29817080070385155,
+          -0.8893979534075034,
+          6.0
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "beta"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -6.0,
+            6.0
+          ]
+        ],
+        "chi2": 1411.4910121525609,
+        "chi2_bao": 9.00600699026118,
+        "chi2_sn": 1402.4850051622998,
+        "H0_rd_km_s": 9977.339834125112,
+        "M_profile": -19.347688747014658,
+        "search_chi2": 1411.4910113155036,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.37057314129197e-07,
+        "refined_grid_difference": -1.2896634871140122e-09,
+        "numerical_pass": true,
+        "D0": 2.5,
+        "at_bound": [
+          false,
+          false,
+          true
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.49107332761
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4910113155036
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4910113342746
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4910113156584
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.6052261334687
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": null,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        },
+        "fixed_parameter": {
+          "alpha_bar": 0.25
+        }
+      },
+      "negative_alpha_positive": {
+        "parameters": [
+          0.29957674272839985,
+          -0.8727036100676497,
+          -4.00004067053429
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "beta"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -6.0,
+            6.0
+          ]
+        ],
+        "chi2": 1411.4216085637204,
+        "chi2_bao": 8.934207381887049,
+        "chi2_sn": 1402.4874011818333,
+        "H0_rd_km_s": 9974.081857392255,
+        "M_profile": -19.346783711604253,
+        "search_chi2": 1411.4216076612418,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 9.024786322697764e-07,
+        "refined_grid_difference": 5.945821612840518e-09,
+        "numerical_pass": true,
+        "D0": -1.0167633572422119e-05,
+        "at_bound": [
+          false,
+          false,
+          false
+        ],
+        "near_D_floor": true,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4216373034817
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4216101485408
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4216076614946
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4216076612418
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1e+50
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": null,
+          "branch": "negative_alpha_positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        },
+        "fixed_parameter": {
+          "alpha_bar": 0.25
+        }
+      }
+    },
+    "1.0": {
+      "positive": {
+        "parameters": [
+          0.29835709786613185,
+          -0.8216755428530518,
+          6.0
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "beta"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -6.0,
+            6.0
+          ]
+        ],
+        "chi2": 1411.4803082277485,
+        "chi2_bao": 8.994465211867062,
+        "chi2_sn": 1402.4858430158815,
+        "H0_rd_km_s": 9976.92740249531,
+        "M_profile": -19.34759749044848,
+        "search_chi2": 1411.4803073956302,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.321183031512192e-07,
+        "refined_grid_difference": -1.2516920833149925e-09,
+        "numerical_pass": true,
+        "D0": 7.0,
+        "at_bound": [
+          false,
+          false,
+          true
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4803800740845
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4803073956302
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4803073966507
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.480307395668
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.7088753500861
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": null,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        },
+        "fixed_parameter": {
+          "alpha_bar": 1.0
+        }
+      },
+      "negative_alpha_positive": {
+        "parameters": [
+          0.300641708268565,
+          -0.765959252827241,
+          -1.0000102197300746
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "beta"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -6.0,
+            6.0
+          ]
+        ],
+        "chi2": 1411.389756566054,
+        "chi2_bao": 8.898095545231058,
+        "chi2_sn": 1402.491661020823,
+        "H0_rd_km_s": 9971.927683353095,
+        "M_profile": -19.346012208883526,
+        "search_chi2": 1411.3897555673555,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 9.986986242438434e-07,
+        "refined_grid_difference": 1.5665818864363246e-08,
+        "numerical_pass": true,
+        "D0": -1.0219730074645383e-05,
+        "at_bound": [
+          false,
+          false,
+          false
+        ],
+        "near_D_floor": true,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.3898671110805
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.3897600977546
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.3897555696853
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.3897555753952
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.3898109697448
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.3897555673555
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.3898109709678
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": null,
+          "branch": "negative_alpha_positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        },
+        "fixed_parameter": {
+          "alpha_bar": 1.0
+        }
+      }
+    },
+    "3.0": {
+      "positive": {
+        "parameters": [
+          0.2984226105483405,
+          -0.6423869511214555,
+          6.0
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "beta"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -6.0,
+            6.0
+          ]
+        ],
+        "chi2": 1411.4766260547808,
+        "chi2_bao": 8.990447402363738,
+        "chi2_sn": 1402.486178652417,
+        "H0_rd_km_s": 9976.784671892243,
+        "M_profile": -19.347565459591294,
+        "search_chi2": 1411.4766252243476,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.304332368425094e-07,
+        "refined_grid_difference": -1.314901965088211e-09,
+        "numerical_pass": true,
+        "D0": 19.0,
+        "at_bound": [
+          false,
+          false,
+          true
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4766864524504
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4766252243476
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.476625516907
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4766252243585
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.476625225302
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": null,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        },
+        "fixed_parameter": {
+          "alpha_bar": 3.0
+        }
+      },
+      "negative_alpha_positive": {
+        "parameters": [
+          0.301938157605178,
+          -0.44215505816943157,
+          -0.347558413641174
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "beta"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -6.0,
+            6.0
+          ]
+        ],
+        "chi2": 1411.3815029181233,
+        "chi2_bao": 8.884116157265082,
+        "chi2_sn": 1402.4973867608583,
+        "H0_rd_km_s": 9969.745578974753,
+        "M_profile": -19.344988676729848,
+        "search_chi2": 1411.38150253791,
+        "selected_method": "Powell",
+        "local_converged": true,
+        "grid_difference": 3.802133505814709e-07,
+        "refined_grid_difference": 4.269850251148455e-09,
+        "numerical_pass": true,
+        "D0": -0.04267524092352204,
+        "at_bound": [
+          false,
+          false,
+          false
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.3815049346897
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.3815025380993
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.3815033013723
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.3815026467164
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.3815025379586
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.3815025502965
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.38150253791
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": null,
+          "branch": "negative_alpha_positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        },
+        "fixed_parameter": {
+          "alpha_bar": 3.0
+        }
+      }
+    },
+    "5.0": {
+      "positive": {
+        "parameters": [
+          0.298437535765351,
+          -0.4632503196441,
+          6.0
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "beta"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -6.0,
+            6.0
+          ]
+        ],
+        "chi2": 1411.4757886269692,
+        "chi2_bao": 8.989530560686642,
+        "chi2_sn": 1402.4862580662825,
+        "H0_rd_km_s": 9976.752298922003,
+        "M_profile": -19.347558143272746,
+        "search_chi2": 1411.475787797002,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.299671208078507e-07,
+        "refined_grid_difference": -1.2828422768507153e-09,
+        "numerical_pass": true,
+        "D0": 31.0,
+        "at_bound": [
+          false,
+          false,
+          true
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4758021755977
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.475787797002
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4757877978734
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4757877988998
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4757924090259
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": null,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        },
+        "fixed_parameter": {
+          "alpha_bar": 5.0
+        }
+      },
+      "negative_alpha_positive": {
+        "parameters": [
+          0.3011653113536967,
+          -0.3561011240000056,
+          -0.40783212485218456
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "beta"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -6.0,
+            6.0
+          ]
+        ],
+        "chi2": 1411.3844106039828,
+        "chi2_bao": 8.871606340241529,
+        "chi2_sn": 1402.5128042637414,
+        "H0_rd_km_s": 9972.599776485478,
+        "M_profile": -19.34600154956992,
+        "search_chi2": 1411.3844099657201,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 6.382626906997757e-07,
+        "refined_grid_difference": -1.1018528311979026e-09,
+        "numerical_pass": true,
+        "D0": -1.0391606242609228,
+        "at_bound": [
+          false,
+          false,
+          false
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.384438285765
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.3844099657201
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.3844130326338
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.384410033059
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.3844101494421
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.3844100710157
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.3844101521724
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": null,
+          "branch": "negative_alpha_positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        },
+        "fixed_parameter": {
+          "alpha_bar": 5.0
+        }
+      }
+    },
+    "10.0": {
+      "positive": {
+        "parameters": [
+          0.29844949215674327,
+          -0.015501844027605571,
+          6.0
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "beta"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -6.0,
+            6.0
+          ]
+        ],
+        "chi2": 1411.4751339778359,
+        "chi2_bao": 8.98881375942878,
+        "chi2_sn": 1402.4863202184072,
+        "H0_rd_km_s": 9976.727698791026,
+        "M_profile": -19.34755256982948,
+        "search_chi2": 1411.4751331481405,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.296954092656961e-07,
+        "refined_grid_difference": -1.2948930816492066e-09,
+        "numerical_pass": true,
+        "D0": 61.0,
+        "at_bound": [
+          false,
+          false,
+          true
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.4751459027802
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.4751331481405
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.475133150219
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1415.4546437016973
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.47545757194
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": null,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        },
+        "fixed_parameter": {
+          "alpha_bar": 10.0
+        }
+      },
+      "negative_alpha_positive": {
+        "parameters": [
+          0.30119984285717805,
+          0.16110865673205144,
+          -0.3268221346756821
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "beta"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -6.0,
+            6.0
+          ]
+        ],
+        "chi2": 1411.380546794683,
+        "chi2_bao": 8.864742948042927,
+        "chi2_sn": 1402.51580384664,
+        "H0_rd_km_s": 9972.793347119059,
+        "M_profile": -19.34606529241132,
+        "search_chi2": 1411.3805461248082,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 6.698746801703237e-07,
+        "refined_grid_difference": -1.1243628250667825e-09,
+        "numerical_pass": true,
+        "D0": -2.268221346756821,
+        "at_bound": [
+          false,
+          false,
+          false
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.3805763521611
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.3805461348534
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.3805461375198
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.3805461248082
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.3805461281588
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.3805461274835
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.3805461289176
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": null,
+          "branch": "negative_alpha_positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        },
+        "fixed_parameter": {
+          "alpha_bar": 10.0
+        }
+      }
+    },
+    "20.0": {
+      "positive": {
+        "parameters": [
+          0.29952103236243605,
+          0.4999999999999676,
+          5.999999999999261
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "beta"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -6.0,
+            6.0
+          ]
+        ],
+        "chi2": 1411.6638854930127,
+        "chi2_bao": 9.08263604860431,
+        "chi2_sn": 1402.5812494444083,
+        "H0_rd_km_s": 10002.659434749385,
+        "M_profile": -19.350151831347564,
+        "search_chi2": 1411.6638846425535,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.50459173307172e-07,
+        "refined_grid_difference": -1.2428245099727064e-09,
+        "numerical_pass": true,
+        "D0": 120.99999999998522,
+        "at_bound": [
+          false,
+          true,
+          true
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.6639520709987
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.6638846425535
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.6638865656066
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1415.8647145929608
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.8422993096665
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": null,
+          "branch": "positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        },
+        "fixed_parameter": {
+          "alpha_bar": 20.0
+        }
+      },
+      "negative_alpha_positive": {
+        "parameters": [
+          0.29977240076386014,
+          0.49999999999999245,
+          -5.999999778767625
+        ],
+        "names": [
+          "omega_m",
+          "omega",
+          "beta"
+        ],
+        "bounds": [
+          [
+            0.01,
+            0.8
+          ],
+          [
+            -3.0,
+            0.5
+          ],
+          [
+            -6.0,
+            6.0
+          ]
+        ],
+        "chi2": 1411.663227116545,
+        "chi2_bao": 9.078487926221218,
+        "chi2_sn": 1402.5847391903237,
+        "H0_rd_km_s": 10003.232754018478,
+        "M_profile": -19.350155898546745,
+        "search_chi2": 1411.6632262704245,
+        "selected_method": "SLSQP",
+        "local_converged": true,
+        "grid_difference": 8.461204288323643e-07,
+        "refined_grid_difference": -1.2166765372967348e-09,
+        "numerical_pass": true,
+        "D0": -118.9999955753525,
+        "at_bound": [
+          false,
+          true,
+          true
+        ],
+        "near_D_floor": false,
+        "attempts": [
+          {
+            "method": "differential_evolution",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.6632325113862
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.6632310982857
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.663228191696
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.6633251778358
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.6820211976228
+          },
+          {
+            "method": "SLSQP",
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "chi2": 1411.6632262704245
+          },
+          {
+            "method": "Powell",
+            "success": true,
+            "message": "Optimization terminated successfully.",
+            "chi2": 1411.6820261726127
+          }
+        ],
+        "spec": {
+          "kind": "power",
+          "beta_fixed": null,
+          "branch": "negative_alpha_positive",
+          "wide": true,
+          "d_floor": 1e-05,
+          "phantom": false
+        },
+        "fixed_parameter": {
+          "alpha_bar": 20.0
+        }
+      }
+    }
+  },
+  "CPL": {
+    "bao": {
+      "parameters": [
+        0.38660596020270577,
+        -0.17883266019536226,
+        -2.7166791317558157
+      ],
+      "names": [
+        "omega_m",
+        "w0",
+        "wa"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ],
+        [
+          -3.0,
+          0.5
+        ],
+        [
+          -5.0,
+          5.0
+        ]
+      ],
+      "chi2": 5.61860003189026,
+      "chi2_bao": 5.61860003189026,
+      "chi2_sn": 0.0,
+      "H0_rd_km_s": 9124.964669013703,
+      "M_profile": null,
+      "search_chi2": 5.618600034981688,
+      "selected_method": "Powell",
+      "local_converged": true,
+      "grid_difference": -3.0914275583882045e-09,
+      "refined_grid_difference": -4.433786671143025e-10,
+      "numerical_pass": true,
+      "D0": null,
+      "at_bound": [
+        false,
+        false,
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 5.618600786175332
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 5.618600035011008
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 5.6186001410609485
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 5.618600034990875
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 5.618600034981688
+        }
+      ],
+      "spec": {
+        "kind": "CPL",
+        "beta_fixed": null,
+        "branch": "not_applicable",
+        "wide": true,
+        "d_floor": 0.0,
+        "phantom": false
+      },
+      "best_fit_crossing_z": 0.4332166875940956,
+      "crossing_significance": "Not assessed; a best-fit crossing is not evidence."
+    },
+    "sn": {
+      "parameters": [
+        0.17631541543490084,
+        -0.7980496185743662,
+        0.5718252961612595
+      ],
+      "names": [
+        "omega_m",
+        "w0",
+        "wa"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ],
+        [
+          -3.0,
+          0.5
+        ],
+        [
+          -5.0,
+          5.0
+        ]
+      ],
+      "chi2": 1402.3963773141509,
+      "chi2_bao": 0.0,
+      "chi2_sn": 1402.3963773141509,
+      "H0_rd_km_s": null,
+      "M_profile": -19.349040806155283,
+      "search_chi2": 1402.3963751468696,
+      "selected_method": "Powell",
+      "local_converged": true,
+      "grid_difference": 2.167281309084501e-06,
+      "refined_grid_difference": 3.2069920052890666e-08,
+      "numerical_pass": true,
+      "D0": null,
+      "at_bound": [
+        false,
+        false,
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1402.396383262118
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1402.3963753421913
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1402.3963821176178
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1402.3963751674005
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1402.3963751468696
+        }
+      ],
+      "spec": {
+        "kind": "CPL",
+        "beta_fixed": null,
+        "branch": "not_applicable",
+        "wide": true,
+        "d_floor": 0.0,
+        "phantom": false
+      },
+      "best_fit_crossing_z": null,
+      "crossing_significance": "Not assessed; a best-fit crossing is not evidence."
+    },
+    "joint": {
+      "parameters": [
+        0.3051805220398194,
+        -0.8905604600896404,
+        -0.21477387950226934
+      ],
+      "names": [
+        "omega_m",
+        "w0",
+        "wa"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ],
+        [
+          -3.0,
+          0.5
+        ],
+        [
+          -5.0,
+          5.0
+        ]
+      ],
+      "chi2": 1411.2804937067801,
+      "chi2_bao": 8.698806506039483,
+      "chi2_sn": 1402.5816872007406,
+      "H0_rd_km_s": 9971.005270003008,
+      "M_profile": -19.345099243791537,
+      "search_chi2": 1411.2804930537152,
+      "selected_method": "Powell",
+      "local_converged": true,
+      "grid_difference": 6.530649443448056e-07,
+      "refined_grid_difference": -1.223725121235475e-09,
+      "numerical_pass": true,
+      "D0": null,
+      "at_bound": [
+        false,
+        false,
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1411.280504609786
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.2804930537575
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1411.2804946659037
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.2804930537943
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1411.2804930537152
+        }
+      ],
+      "spec": {
+        "kind": "CPL",
+        "beta_fixed": null,
+        "branch": "not_applicable",
+        "wide": true,
+        "d_floor": 0.0,
+        "phantom": false
+      },
+      "best_fit_crossing_z": 1.0389730484318256,
+      "crossing_significance": "Not assessed; a best-fit crossing is not evidence."
+    }
+  },
+  "phantom": {
+    "positive": {
+      "parameters": [
+        0.3042165314398901,
+        -1.0000010000000206,
+        4.88977372515102,
+        1.623853439149718
+      ],
+      "names": [
+        "omega_m",
+        "omega",
+        "alpha_bar",
+        "beta"
+      ],
+      "bounds": [
+        [
+          0.05,
+          0.6
+        ],
+        [
+          -3.0,
+          -1.000001
+        ],
+        [
+          -0.8,
+          5.0
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "chi2": 1416.1391907340892,
+      "chi2_bao": 10.870312777966193,
+      "chi2_sn": 1405.268877956123,
+      "H0_rd_km_s": 10101.281460279512,
+      "M_profile": -19.36025074403755,
+      "search_chi2": 1416.1391898093946,
+      "selected_method": "SLSQP",
+      "local_converged": true,
+      "grid_difference": 9.246946319763083e-07,
+      "refined_grid_difference": -9.197265171678737e-10,
+      "numerical_pass": true,
+      "D0": 8.940275880250411,
+      "at_bound": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1416.1392255662718
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1416.1391958926804
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1416.1392081066508
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1416.1391898093946
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1416.1392081127753
+        }
+      ],
+      "spec": {
+        "kind": "power",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": false,
+        "d_floor": 1e-05,
+        "phantom": true
+      }
+    },
+    "negative_alpha_positive": {
+      "parameters": [
+        0.30421418695049257,
+        -1.0000010000000037,
+        4.568244710687779,
+        -2.765391137891838
+      ],
+      "names": [
+        "omega_m",
+        "omega",
+        "alpha_bar",
+        "beta"
+      ],
+      "bounds": [
+        [
+          0.05,
+          0.6
+        ],
+        [
+          -3.0,
+          -1.000001
+        ],
+        [
+          -0.8,
+          5.0
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "chi2": 1416.1391916750506,
+      "chi2_bao": 10.869902364978994,
+      "chi2_sn": 1405.2692893100716,
+      "H0_rd_km_s": 10101.299563665212,
+      "M_profile": -19.360251514412365,
+      "search_chi2": 1416.1391907503541,
+      "selected_method": "SLSQP",
+      "local_converged": true,
+      "grid_difference": 9.246964509657118e-07,
+      "refined_grid_difference": -9.301857062382624e-10,
+      "numerical_pass": true,
+      "D0": -11.632983438657247,
+      "at_bound": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1416.1391956847972
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1416.1391907503541
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1416.1392081066574
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1416.1392068158666
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1416.1392081072318
+        }
+      ],
+      "spec": {
+        "kind": "power",
+        "beta_fixed": null,
+        "branch": "negative_alpha_positive",
+        "wide": false,
+        "d_floor": 1e-05,
+        "phantom": true
+      }
+    },
+    "negative_alpha_negative": {
+      "parameters": [
+        0.3042144786956896,
+        -1.0000010000025252,
+        -0.49549160914969387,
+        2.0187508926347704
+      ],
+      "names": [
+        "omega_m",
+        "omega",
+        "alpha_bar",
+        "beta"
+      ],
+      "bounds": [
+        [
+          0.05,
+          0.6
+        ],
+        [
+          -3.0,
+          -1.000001
+        ],
+        [
+          -0.8,
+          5.0
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "chi2": 1416.1393804109298,
+      "chi2_bao": 10.870007111014182,
+      "chi2_sn": 1405.2693732999155,
+      "H0_rd_km_s": 10101.300712115048,
+      "M_profile": -19.360251712001034,
+      "search_chi2": 1416.1393794861924,
+      "selected_method": "SLSQP",
+      "local_converged": true,
+      "grid_difference": 9.247373782272916e-07,
+      "refined_grid_difference": -8.99490260053426e-10,
+      "numerical_pass": true,
+      "D0": -0.0002741282639833198,
+      "at_bound": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1e+50
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1416.1393794861924
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1e+50
+        }
+      ],
+      "spec": {
+        "kind": "power",
+        "beta_fixed": null,
+        "branch": "negative_alpha_negative",
+        "wide": false,
+        "d_floor": 1e-05,
+        "phantom": true
+      }
+    }
+  },
+  "wide_final": {
+    "positive": {
+      "parameters": [
+        0.29861450579166415,
+        -0.9954968525651604,
+        -0.9499999999999998,
+        -6.0
+      ],
+      "names": [
+        "omega_m",
+        "omega",
+        "alpha_bar",
+        "beta"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ],
+        [
+          -3.0,
+          0.5
+        ],
+        [
+          -0.95,
+          20.0
+        ],
+        [
+          -6.0,
+          6.0
+        ]
+      ],
+      "chi2": 1411.4661944409575,
+      "chi2_bao": 8.97895156298305,
+      "chi2_sn": 1402.4872428779745,
+      "H0_rd_km_s": 9976.380734525956,
+      "M_profile": -19.347475501021936,
+      "search_chi2": 1411.4661936153245,
+      "selected_method": "SLSQP",
+      "local_converged": true,
+      "grid_difference": 8.256329238065518e-07,
+      "refined_grid_difference": -1.311946107307449e-09,
+      "numerical_pass": true,
+      "D0": 6.699999999999999,
+      "at_bound": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1411.474980638683
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.4661936153245
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1416.6193315983514
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.4661936159005
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1416.6193234968796
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.4664992033022
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1416.6203950851213
+        }
+      ],
+      "spec": {
+        "kind": "power",
+        "beta_fixed": null,
+        "branch": "positive",
+        "wide": true,
+        "d_floor": 1e-05,
+        "phantom": false
+      }
+    },
+    "negative_alpha_positive": {
+      "parameters": [
+        0.3012152362336815,
+        0.5,
+        13.266144140508873,
+        -0.3051049392155889
+      ],
+      "names": [
+        "omega_m",
+        "omega",
+        "alpha_bar",
+        "beta"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ],
+        [
+          -3.0,
+          0.5
+        ],
+        [
+          -0.95,
+          20.0
+        ],
+        [
+          -6.0,
+          6.0
+        ]
+      ],
+      "chi2": 1411.379273576527,
+      "chi2_bao": 8.863091364340079,
+      "chi2_sn": 1402.516182212187,
+      "H0_rd_km_s": 9972.901116127217,
+      "M_profile": -19.346085060049376,
+      "search_chi2": 1411.3792729005675,
+      "selected_method": "SLSQP",
+      "local_converged": true,
+      "grid_difference": 6.759596544725355e-07,
+      "refined_grid_difference": -1.1348220141371712e-09,
+      "numerical_pass": true,
+      "D0": -3.0475661016152005,
+      "at_bound": [
+        false,
+        true,
+        false,
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1411.3793184437445
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.3792729005675
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1411.3792729481877
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.3801387779151
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1411.3801388021768
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.379272905767
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1e+50
+        }
+      ],
+      "spec": {
+        "kind": "power",
+        "beta_fixed": null,
+        "branch": "negative_alpha_positive",
+        "wide": true,
+        "d_floor": 1e-05,
+        "phantom": false
+      }
+    },
+    "negative_alpha_negative": {
+      "parameters": [
+        0.2996333861000717,
+        -0.9953982064341358,
+        -0.95,
+        1.1217682498831891
+      ],
+      "names": [
+        "omega_m",
+        "omega",
+        "alpha_bar",
+        "beta"
+      ],
+      "bounds": [
+        [
+          0.01,
+          0.8
+        ],
+        [
+          -3.0,
+          0.5
+        ],
+        [
+          -0.95,
+          20.0
+        ],
+        [
+          -6.0,
+          6.0
+        ]
+      ],
+      "chi2": 1411.4250750657066,
+      "chi2_bao": 8.932671800635223,
+      "chi2_sn": 1402.4924032650713,
+      "H0_rd_km_s": 9975.201787658869,
+      "M_profile": -19.347160824451496,
+      "search_chi2": 1411.4250742580678,
+      "selected_method": "supplied",
+      "local_converged": false,
+      "grid_difference": 8.076387985056499e-07,
+      "refined_grid_difference": -1.2655618775170296e-09,
+      "numerical_pass": true,
+      "D0": -0.06567983738902972,
+      "at_bound": [
+        false,
+        false,
+        true,
+        false
+      ],
+      "near_D_floor": false,
+      "attempts": [
+        {
+          "method": "differential_evolution",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1e+50
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.4250742580734
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1e+50
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.4250742584422
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1e+50
+        },
+        {
+          "method": "SLSQP",
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "chi2": 1411.425074258118
+        },
+        {
+          "method": "Powell",
+          "success": true,
+          "message": "Optimization terminated successfully.",
+          "chi2": 1e+50
+        }
+      ],
+      "spec": {
+        "kind": "power",
+        "beta_fixed": null,
+        "branch": "negative_alpha_negative",
+        "wide": true,
+        "d_floor": 1e-05,
+        "phantom": false
+      }
+    }
+  }
+}

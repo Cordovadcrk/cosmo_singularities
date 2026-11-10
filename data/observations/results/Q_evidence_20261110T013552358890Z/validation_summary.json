@@ -1,0 +1,236 @@
+{
+  "parent_hashes": {
+    "report.json": "759fa0eb56f0e5cb08dbb295df7c81c3a86662614b92c5667662b82e702a8d0b",
+    "constraints.json": "51c775727b848c6a4041cc33f61bf9ea2ee6d4e8f3d8b09efa797e59786c69bb"
+  },
+  "scope": "Profiles only; neither posterior nor evidence. Discrete profiles do not certify global extrema.",
+  "validations": {
+    "LCDM": {
+      "max_relative_density_ODE_error": 0.0,
+      "max_relative_distance_quad_error": 2.561284517810236e-13,
+      "min_abs_D": 1.0,
+      "min_F": 1.0,
+      "entropy_sign_Tpositive_on_grid": true,
+      "caveat": "Entropy flag is only the sampled sign of -Qdot; not S>0 or stability."
+    },
+    "noQ": {
+      "max_relative_density_ODE_error": 2.220446049250313e-16,
+      "max_relative_distance_quad_error": 2.233768725545815e-13,
+      "min_abs_D": 1.0,
+      "min_F": 1.0,
+      "entropy_sign_Tpositive_on_grid": true,
+      "caveat": "Entropy flag is only the sampled sign of -Qdot; not S>0 or stability."
+    },
+    "constantQ": {
+      "max_relative_density_ODE_error": 2.220446049250313e-16,
+      "max_relative_distance_quad_error": 2.1960211427085596e-13,
+      "min_abs_D": 1.0,
+      "min_F": 0.050000000000006595,
+      "entropy_sign_Tpositive_on_grid": true,
+      "caveat": "Entropy flag is only the sampled sign of -Qdot; not S>0 or stability."
+    },
+    "power_positive": {
+      "max_relative_density_ODE_error": 2.220446049250313e-16,
+      "max_relative_distance_quad_error": 2.2115642650533118e-13,
+      "min_abs_D": 6.603342487793784,
+      "min_F": 0.050000000000000155,
+      "entropy_sign_Tpositive_on_grid": true,
+      "caveat": "Entropy flag is only the sampled sign of -Qdot; not S>0 or stability."
+    },
+    "power_negative_alpha_positive": {
+      "max_relative_density_ODE_error": 7.216449660063518e-15,
+      "max_relative_distance_quad_error": 1.9673151996357774e-13,
+      "min_abs_D": 3.0475661016152005,
+      "min_F": 14.266144140508873,
+      "entropy_sign_Tpositive_on_grid": true,
+      "caveat": "Entropy flag is only the sampled sign of -Qdot; not S>0 or stability."
+    },
+    "power_negative_alpha_negative": {
+      "max_relative_density_ODE_error": 3.3995029014022293e-11,
+      "max_relative_distance_quad_error": 2.1649348980190553e-13,
+      "min_abs_D": 0.009477724671946186,
+      "min_F": 0.050000000000000044,
+      "entropy_sign_Tpositive_on_grid": true,
+      "caveat": "Entropy flag is only the sampled sign of -Qdot; not S>0 or stability."
+    }
+  },
+  "comparisons": {},
+  "profiles": {
+    "beta": [
+      [
+        -6.0,
+        0.05062740974699409
+      ],
+      [
+        -3.0,
+        0.035905460386629784
+      ],
+      [
+        -2.0,
+        0.02634490285367974
+      ],
+      [
+        -1.0,
+        0.01048278059124641
+      ],
+      [
+        -0.5,
+        0.0008663325518227794
+      ],
+      [
+        0.0,
+        0.08927386169284546
+      ],
+      [
+        0.5,
+        0.0917777313300121
+      ],
+      [
+        1.0,
+        0.1462022252483166
+      ],
+      [
+        1.5,
+        0.05178713489931397
+      ],
+      [
+        2.0,
+        0.057096532145351375
+      ],
+      [
+        3.0,
+        0.06356331742790644
+      ],
+      [
+        6.0,
+        0.07208377207621197
+      ]
+    ],
+    "alpha_bar": [
+      [
+        -0.95,
+        0.04580148917943916
+      ],
+      [
+        -0.8,
+        0.05376634603567254
+      ],
+      [
+        -0.4,
+        0.09709470277152832
+      ],
+      [
+        0.0,
+        0.14620222523512894
+      ],
+      [
+        0.25,
+        0.042334987193271445
+      ],
+      [
+        1.0,
+        0.010482989526963138
+      ],
+      [
+        3.0,
+        0.0022293415961485152
+      ],
+      [
+        5.0,
+        0.005137027455702992
+      ],
+      [
+        10.0,
+        0.0012732181558021693
+      ],
+      [
+        20.0,
+        0.28395354001781925
+      ]
+    ],
+    "omega_noQ": [
+      [
+        -1.2,
+        46.56868515986366
+      ],
+      [
+        -1.1,
+        20.591129256108843
+      ],
+      [
+        -1.0,
+        4.6136970800591826
+      ],
+      [
+        -0.98,
+        2.7525269514389947
+      ],
+      [
+        -0.96,
+        1.3617078356189722
+      ],
+      [
+        -0.94,
+        0.45113668180215427
+      ],
+      [
+        -0.92,
+        0.03009720040790853
+      ],
+      [
+        -0.9,
+        0.10721619857849873
+      ],
+      [
+        -0.88,
+        0.6904209648432698
+      ],
+      [
+        -0.86,
+        1.7868979780180325
+      ],
+      [
+        -0.84,
+        3.4030532180361206
+      ],
+      [
+        -0.82,
+        5.544474363143763
+      ],
+      [
+        -0.8,
+        8.21589515727078
+      ],
+      [
+        -0.75,
+        17.236174209987894
+      ],
+      [
+        -0.7,
+        29.62495753553958
+      ]
+    ]
+  },
+  "noQ_conditional_profile_crossings": {
+    "1.0": [
+      -0.9532307544785286,
+      -0.8731529500775057
+    ],
+    "3.841459": [
+      -0.9925230454040781,
+      -0.8354369770450025
+    ]
+  },
+  "noQ_interval_note": "PCHIP interpolation of discrete profiles. Approximate regular-model likelihood thresholds; not diffusion intervals or Bayesian credible intervals.",
+  "CPL_best_fit_crossing_z": 1.0389730484318256,
+  "power_improvement_over_noQ": 0.1462022252483166,
+  "CPL_improvement_over_noQ": 0.24498209499529366,
+  "beta_profile_delta_range": [
+    0.0008663325518227794,
+    0.1462022252483166
+  ],
+  "alpha_profile_delta_range": [
+    0.0012732181558021693,
+    0.28395354001781925
+  ]
+}

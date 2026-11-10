@@ -1,0 +1,19 @@
+{
+  "repository": "CobayaSampler/bao_data",
+  "commit": "bb0c1c9009dc76d1391300e169e8df38fd1096db",
+  "downloaded_utc": "2026-10-27T18:35:19.288869+00:00",
+  "files": [
+    {
+      "name": "bao_mean.txt",
+      "url": "https://raw.githubusercontent.com/CobayaSampler/bao_data/bb0c1c9009dc76d1391300e169e8df38fd1096db/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt",
+      "sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+      "bytes": 472
+    },
+    {
+      "name": "bao_cov.txt",
+      "url": "https://raw.githubusercontent.com/CobayaSampler/bao_data/bb0c1c9009dc76d1391300e169e8df38fd1096db/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_cov.txt",
+      "sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+      "bytes": 2547
+    }
+  ]
+}

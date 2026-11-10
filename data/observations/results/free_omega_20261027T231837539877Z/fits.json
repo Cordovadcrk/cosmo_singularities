@@ -1,0 +1,410 @@
+{
+  "scope": "Exploratory bounded multistart optimization; no posterior, no global optimum guarantee.",
+  "dataset": "joint",
+  "H0_reference": 70.0,
+  "n_bao": 13,
+  "n_sn": 1580,
+  "versions": {
+    "python": "3.13.7",
+    "numpy": "2.3.3",
+    "scipy": "1.17.1"
+  },
+  "data_manifests": {
+    "desi_dr2": {
+      "repository": "CobayaSampler/bao_data",
+      "commit": "bb0c1c9009dc76d1391300e169e8df38fd1096db",
+      "downloaded_utc": "2026-10-27T18:35:19.288869+00:00",
+      "files": [
+        {
+          "name": "bao_mean.txt",
+          "url": "https://raw.githubusercontent.com/CobayaSampler/bao_data/bb0c1c9009dc76d1391300e169e8df38fd1096db/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt",
+          "sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+          "bytes": 472
+        },
+        {
+          "name": "bao_cov.txt",
+          "url": "https://raw.githubusercontent.com/CobayaSampler/bao_data/bb0c1c9009dc76d1391300e169e8df38fd1096db/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_cov.txt",
+          "sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+          "bytes": 2547
+        }
+      ]
+    },
+    "pantheon_plus": {
+      "repository": "PantheonPlusSH0ES/DataRelease",
+      "commit": "c447f0fea703fcd0fff57de5000947b5ca81286b",
+      "downloaded_utc": "2026-10-27T18:35:22.705028+00:00",
+      "files": [
+        {
+          "name": "sn.dat",
+          "url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES.dat",
+          "sha256": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
+          "bytes": 579283
+        },
+        {
+          "name": "sn.cov",
+          "url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES_STAT%2BSYS.cov",
+          "sha256": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
+          "bytes": 33284960
+        },
+        {
+          "name": "README.txt",
+          "url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/README",
+          "sha256": "e2b0d262757f01c1794a938c78d32600a21e289b2a0320e5c660c4c6fc9aa87e",
+          "bytes": 4056
+        }
+      ]
+    }
+  },
+  "hashes": {
+    "src/singularities.py": "872cbbe9d6773ea283a8026d567593d0599550c8d4e596524c15fc4e291829d6",
+    "src/models.py": "6a7e84f6e2f668bc0db179cd13507ae6666a64a678524b90aa4cf3e444de99d3",
+    "src/datasets.py": "207c4c4ee93e100de41a35b53a8e71db0a07e0e78a5272563d1d492388a51760",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/_checkpoints.py": "7edc61fe7feeb68ec6bb557f3b471064254871847a1414d016ff2ee6b3c08c55",
+    "src/classifiers.py": "c66cb84ab86a6fbfce434078ad2213d68eb5b3264d8fbba4c20f16fcc255d4be",
+    "src/parameter_space.py": "a2df64343ada02affa471b0e3d027a6d29f043d3df7c0cb0bdf23cbf8900b96d",
+    "src/barotropic_analysis.py": "7e94cc9150f7f8621e0189aa0f270b9ad349217322386acd292ef035e10ae460",
+    "src/_analytic.py": "7de21ebb7375732ae632d252f45a8a2a01ec113b182769b2183b0339cf2da1b9",
+    "src/observations/background.py": "2d83ebf49499b1450db441cf8982e1364d1276eb17627f1ac7670c84ebef6dd0",
+    "src/observations/__init__.py": "d5845e875b52dbc7909dc769d99bf9ad8bc71cc301f1fa4ae96fa32e74aec930",
+    "src/observations/fitting.py": "5c39e036527df244dfd17ca12cfa35f5e6dbeb7ab4712ca3458d235c297410b5",
+    "src/observations/barotropic.py": "76b79a4e14aae05208166e25d7f2830c65f23067c4adfa3ee18bca0983059d7b",
+    "src/observations/likelihood.py": "a5047cbbda85f80c7a2f0582ac6d9fcdaaa1205d960b07b129aa378d7e5f2f78",
+    "src/observations/data.py": "094b787c77a744f4d890f44ac04a69f799cdf01cd3f264e75b16342ad880ee9f",
+    "scripts/fit_barotropic_observations.py": "1f920aa0e83b67ac6cba31b341faeb42f634516ec106ff66979e01862664763e"
+  },
+  "results": {
+    "LCDM": {
+      "parameters": [
+        0.3044053957946281,
+        10099.824721731356
+      ],
+      "chi2": 1399.7953877823916,
+      "chi2_bao": 10.903843152509053,
+      "chi2_sn": 1388.8915446298824,
+      "M_profile": -19.360550025867784,
+      "success": true,
+      "message": "Optimization terminated successfully.",
+      "at_bound": [
+        false,
+        false
+      ],
+      "starts": [
+        {
+          "success": true,
+          "chi2": 1399.7953877823916,
+          "parameters": [
+            0.3044053957946281,
+            10099.824721731356
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 1399.7953877824004,
+          "parameters": [
+            0.3044052899869347,
+            10099.825576420699
+          ]
+        }
+      ],
+      "names": [
+        "omega_m",
+        "H0_rd_km_s"
+      ],
+      "bounds": [
+        [
+          0.05,
+          0.6
+        ],
+        [
+          7000.0,
+          13000.0
+        ]
+      ],
+      "initial_points": [
+        [
+          0.3,
+          10000.0
+        ],
+        [
+          0.4,
+          10500.0
+        ]
+      ],
+      "degeneracies": [
+        "Fondo LCDM: alpha_bar y beta no identificables en rama regular.",
+        "Sin difusi\u00f3n: beta no identificable.",
+        "S\u00f3lo w_eff=(omega-alpha_bar)/(1+alpha_bar) es identificable en el sector oscuro."
+      ],
+      "D0": 1.0,
+      "grid_delta_chi2": 9.21932041819673e-09,
+      "grid_check_passed": true
+    },
+    "wCDM": {
+      "parameters": [
+        0.29758349593828454,
+        9974.92189748757,
+        -0.9114389286786841
+      ],
+      "chi2": 1395.018195506299,
+      "chi2_bao": 9.041226978464788,
+      "chi2_sn": 1385.9769685278343,
+      "M_profile": -19.348008253186375,
+      "success": true,
+      "message": "Optimization terminated successfully.",
+      "at_bound": [
+        false,
+        false,
+        false
+      ],
+      "starts": [
+        {
+          "success": true,
+          "chi2": 1395.0181956136917,
+          "parameters": [
+            0.2975804091725072,
+            9974.926901812256,
+            -0.9114308739706627
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 1395.018195506299,
+          "parameters": [
+            0.29758349593828454,
+            9974.92189748757,
+            -0.9114389286786841
+          ]
+        }
+      ],
+      "names": [
+        "omega_m",
+        "H0_rd_km_s",
+        "omega"
+      ],
+      "bounds": [
+        [
+          0.05,
+          0.6
+        ],
+        [
+          7000.0,
+          13000.0
+        ],
+        [
+          -1.8,
+          -0.3
+        ]
+      ],
+      "initial_points": [
+        [
+          0.3,
+          10000.0,
+          -1.15
+        ],
+        [
+          0.4,
+          10500.0,
+          -0.85
+        ]
+      ],
+      "degeneracies": [
+        "Sin difusi\u00f3n: beta no identificable.",
+        "S\u00f3lo w_eff=(omega-alpha_bar)/(1+alpha_bar) es identificable en el sector oscuro."
+      ],
+      "D0": 1.0,
+      "grid_delta_chi2": 7.792095857439563e-09,
+      "grid_check_passed": true
+    },
+    "diffusion_Dpositive": {
+      "parameters": [
+        0.24326577810527847,
+        10280.549422154943,
+        -0.8238893340022759,
+        4.999995240414899,
+        -0.19999836990172581
+      ],
+      "chi2": 1520.5200059049057,
+      "chi2_bao": 117.47627962381858,
+      "chi2_sn": 1403.0437262810872,
+      "M_profile": -19.37394396632291,
+      "success": true,
+      "message": "Optimization terminated successfully.",
+      "at_bound": [
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "starts": [
+        {
+          "success": true,
+          "chi2": 1e+100,
+          "parameters": [
+            0.23063076074850464,
+            9965.654332215863,
+            -1.1499129844621907,
+            4.961607014116259,
+            -2.999999254833618
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 1520.5200059049057,
+          "parameters": [
+            0.24326577810527847,
+            10280.549422154943,
+            -0.8238893340022759,
+            4.999995240414899,
+            -0.19999836990172581
+          ]
+        }
+      ],
+      "names": [
+        "omega_m",
+        "H0_rd_km_s",
+        "omega",
+        "alpha_bar",
+        "beta"
+      ],
+      "bounds": [
+        [
+          0.05,
+          0.6
+        ],
+        [
+          7000.0,
+          13000.0
+        ],
+        [
+          -1.8,
+          -0.3
+        ],
+        [
+          -0.8,
+          5.0
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "initial_points": [
+        [
+          0.3,
+          10000.0,
+          -1.15,
+          0.2,
+          2.0
+        ],
+        [
+          0.4,
+          10500.0,
+          -0.85,
+          0.3,
+          -0.5
+        ]
+      ],
+      "degeneracies": [],
+      "D0": 9.102400632565733e-06,
+      "grid_delta_chi2": -7.560174708487466e-09,
+      "grid_check_passed": true
+    },
+    "diffusion_Dnegative": {
+      "parameters": [
+        0.3015781830581691,
+        9967.647079047689,
+        -0.3818305184973581,
+        4.380982066243262,
+        -0.3857882884243134
+      ],
+      "chi2": 1394.8502933246587,
+      "chi2_bao": 8.858418601671158,
+      "chi2_sn": 1385.9918747229874,
+      "M_profile": -19.34569977089144,
+      "success": true,
+      "message": "Optimization terminated successfully.",
+      "at_bound": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "starts": [
+        {
+          "success": true,
+          "chi2": 1394.8502933246587,
+          "parameters": [
+            0.3015781830581691,
+            9967.647079047689,
+            -0.3818305184973581,
+            4.380982066243262,
+            -0.3857882884243134
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 1e+100,
+          "parameters": [
+            0.5999999767799952,
+            10518.782422740342,
+            -0.8286427936400904,
+            4.961422403967908,
+            2.1127468800764464
+          ]
+        }
+      ],
+      "names": [
+        "omega_m",
+        "H0_rd_km_s",
+        "omega",
+        "alpha_bar",
+        "beta"
+      ],
+      "bounds": [
+        [
+          0.05,
+          0.6
+        ],
+        [
+          7000.0,
+          13000.0
+        ],
+        [
+          -1.8,
+          -0.3
+        ],
+        [
+          -0.8,
+          5.0
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "initial_points": [
+        [
+          0.3,
+          10000.0,
+          -1.05,
+          4.0,
+          -1.0
+        ],
+        [
+          0.4,
+          10500.0,
+          -0.9,
+          3.0,
+          -2.0
+        ]
+      ],
+      "degeneracies": [],
+      "D0": -0.6901315729536,
+      "grid_delta_chi2": 4.813500709133223e-09,
+      "grid_check_passed": true
+    }
+  }
+}
