@@ -1,0 +1,6 @@
+{
+  "retrieved_local_date": "2026-11-09",
+  "source": "https://raw.githubusercontent.com/CobayaSampler/cobaya/master/cobaya/likelihoods/sn/pantheonplus.py",
+  "sha256": "cbd0c5c54072f18851f68d4db2df3ca48f13555ca581ea0476de4a12730c2fd5",
+  "purpose": "Reference for zHD mask and projected inverse covariance; not executed as project code."
+}
