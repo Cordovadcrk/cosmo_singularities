@@ -1,0 +1,477 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{siunitx}
+
+\geometry{margin=2.2cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\R}{\mathcal{R}}
+
+\title{\textbf{Avance de resultados: régimen phantom en gravedad unimodular con difusión}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Modelo y ecuaciones de evolución}
+
+Se considera un universo FLRW espacialmente plano, homogéneo e isotrópico,
+con un fluido barotrópico y una función de difusión de la forma
+\begin{equation}
+    p=\omega\rho,
+    \qquad
+    Q=\alpha\rho^\beta.
+\end{equation}
+En las unidades empleadas en el proyecto y tomando nula la constante de
+integración cosmológica explícita, las ecuaciones de fondo son
+\begin{align}
+    3H^2 &= \rho+\alpha\rho^\beta
+    =\rho F(\rho),\\
+    F(\rho)&=1+\alpha\rho^{\beta-1},\\
+    D(\rho)&=1+\alpha\beta\rho^{\beta-1},\\
+    \dot{\rho}
+    &=
+    -\frac{3H(1+\omega)\rho}{D(\rho)},\\
+    \dot H&=-\frac{1+\omega}{2}\rho.
+\end{align}
+
+Para el régimen phantom se define
+\begin{equation}
+    \gamma\equiv-(1+\omega)>0,
+\end{equation}
+de modo que
+\begin{equation}
+    \dot\rho=
+    \frac{3\gamma H\rho}{D(\rho)}.
+\end{equation}
+Por lo tanto, en una rama expansiva el signo de $D(\rho)$ controla
+directamente si la densidad aumenta o disminuye.
+
+\section{Barrido numérico completo}
+
+El barrido \texttt{full} contiene $5425$ puntos en total. El sector phantom
+corresponde a
+\[
+\omega=-1.4,\quad -1.2,\quad -1.05,
+\]
+con $775$ puntos por cada valor de $\omega$, es decir, $2325$ puntos phantom.
+
+No se registraron errores de integración en el archivo combinado.
+La frontera de tiempo finito/infinito prevista analíticamente en
+$\beta=2$ fue contrastada en $1386$ puntos del sector
+$\alpha>0$, $\rho\rightarrow\infty$, obteniéndose acuerdo numérico completo
+con la predicción asintótica.
+
+\section{Clasificación final del sector phantom}
+
+Después de combinar el barrido numérico con las relaciones asintóticas,
+la clasificación queda:
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{p{4.0cm} p{3.0cm} p{6.0cm}}
+\toprule
+\textbf{Región} & \textbf{Destino} & \textbf{Comportamiento futuro}\\
+\midrule
+$\beta<0$, $\alpha>0$, $D_0<0$
+&
+Rip asintótico dominado por difusión
+&
+$t\to\infty$, $\rho,p\to0$, mientras
+$Q,a,H,\R\to\infty$ y $\dot H\to0^{+}$.
+\\[1mm]
+
+$\alpha<0$, $\beta>1$
+&
+Tipo IV en $D(\rho_D)=0$
+&
+$t_s<\infty$; $\rho,p,a,H,\dot H$ finitos,
+pero $\dot\rho$ y $\ddot H$ divergen.
+\\[1mm]
+
+$\alpha>0$, $\beta\ge2$
+&
+Little Rip
+&
+$t\to\infty$; $\rho,|p|,Q,a,H,\dot H\to\infty$.
+No existe singularidad a tiempo cósmico finito.
+\\[1mm]
+
+Resto de las ramas phantom físicas
+&
+Big Rip, Tipo I
+&
+$t_s<\infty$; $a,\rho,|p|,H\to\infty$.
+\\
+\bottomrule
+\end{tabular}
+\caption{Clasificación analítico-numérica del régimen phantom.}
+\end{table}
+
+Para $\rho_0=1$, la condición de la primera región se reduce a
+\begin{equation}
+    D_0=1+\alpha\beta<0
+    \quad\Longleftrightarrow\quad
+    \alpha>-\frac{1}{\beta},
+    \qquad \beta<0.
+\end{equation}
+
+Cada slice phantom del barrido contiene, tras la revisión analítica,
+\begin{align*}
+417&\quad \text{Big Rip},\\
+158&\quad \text{rips dominados por difusión},\\
+140&\quad \text{Little Rip},\\
+60&\quad \text{Tipo IV}.
+\end{align*}
+La igualdad de estos conteos para los tres valores de $\omega<-1$ estudiados
+indica que las fronteras cualitativas dependen de $(\alpha,\beta)$, mientras
+que $|1+\omega|$ fija principalmente la escala temporal. Los porcentajes
+del barrido no deben interpretarse como probabilidades físicas, ya que
+dependen de la discretización escogida.
+
+\begin{figure}[ht]
+\centering
+\IfFileExists{mapa_phantom_omega_m1p2_revisado.png}{
+\includegraphics[width=0.88\textwidth]{mapa_phantom_omega_m1p2_revisado.png}
+}{
+\fbox{\parbox{0.8\textwidth}{Subir junto al .tex la figura
+\texttt{mapa\_phantom\_omega\_m1p2\_revisado.png}.}}
+}
+\caption{Mapa revisado de destinos cosmológicos para $\omega=-1.2$.}
+\end{figure}
+
+\section{Frontera analítica $\beta=2$}
+
+Para $\alpha>0$, $\beta>1$ y $\rho\to\infty$,
+\begin{equation}
+    H\sim\sqrt{\frac{\alpha}{3}}\rho^{\beta/2},
+    \qquad
+    D\sim\alpha\beta\rho^{\beta-1}.
+\end{equation}
+Por consiguiente,
+\begin{equation}
+    \dot\rho
+    \sim
+    \frac{\sqrt3\,\gamma}{\beta\sqrt{\alpha}}
+    \rho^{\,2-\beta/2}.
+\end{equation}
+El tiempo restante satisface
+\begin{equation}
+    \Delta t
+    \propto
+    \int^\infty
+    \rho^{-(2-\beta/2)}\,\dd\rho.
+\end{equation}
+La integral converge si y sólo si $\beta<2$. Por tanto,
+\begin{equation}
+    \boxed{
+    1<\beta<2 \Rightarrow \text{Big Rip},
+    \qquad
+    \beta\ge2 \Rightarrow \text{Little Rip}
+    }
+\end{equation}
+para $\alpha>0$. El caso $\beta=2$ es marginal: $\rho$ crece
+exponencialmente con el tiempo y la divergencia se desplaza a
+$t\to\infty$.
+
+\section{Frontera $D(\rho)=0$ y singularidad Tipo IV}
+
+Para $\alpha<0$ y $\beta>1$ existe
+\begin{equation}
+    \rho_D=
+    \left(
+    -\frac{1}{\alpha\beta}
+    \right)^{1/(\beta-1)}.
+\end{equation}
+En esta densidad,
+\begin{equation}
+    F(\rho_D)
+    =
+    1-\frac{1}{\beta}
+    =
+    \frac{\beta-1}{\beta}>0,
+\end{equation}
+por lo que $H_D$ permanece real y finito. También permanecen finitos
+$\rho_D$, $p_D$, $a_D$ y $\dot H_D$. Sin embargo,
+\[
+D(\rho)\to0
+\]
+hace divergir $\dot\rho$, y como
+\begin{equation}
+    \ddot H=\frac{\gamma}{2}\dot\rho,
+\end{equation}
+también diverge $\ddot H$. Cerca de la frontera,
+\begin{equation}
+    |\rho-\rho_D|
+    \propto
+    (t_s-t)^{1/2},
+\end{equation}
+de donde
+\begin{equation}
+    |\dot\rho|,
+    |\ddot H|
+    \propto
+    (t_s-t)^{-1/2}.
+\end{equation}
+Esto confirma la clasificación Tipo IV.
+
+\section{Caso F2: $\omega=-1.2$, $\alpha=4$, $\beta=-1$}
+
+Para este caso,
+\begin{equation}
+    Q=\frac{4}{\rho},
+    \qquad
+    D(\rho)=1-\frac{4}{\rho^2}.
+\end{equation}
+Con $\rho_0=1$,
+\[
+D_0=-3<0,
+\]
+por lo que, a pesar de que el fluido es phantom,
+\begin{equation}
+    \boxed{\dot\rho<0}.
+\end{equation}
+La densidad material disminuye hacia cero, pero
+\begin{equation}
+    Q=\frac4\rho\to\infty,
+\end{equation}
+y la ecuación de Friedmann produce
+\begin{equation}
+    3H^2=\rho+\frac4\rho
+    \quad\Longrightarrow\quad
+    H\to\infty.
+\end{equation}
+
+\subsection{Asintótica general de la rama F2-like}
+
+Para $\alpha>0$, $\beta<0$ y $D<0$, cuando $\rho\to0$,
+\begin{align}
+    H&\sim
+    \sqrt{\frac{\alpha}{3}}\rho^{\beta/2},\\
+    \dot\rho
+    &\sim
+    -\frac{\sqrt3\,\gamma}
+    {|\beta|\sqrt{\alpha}}
+    \rho^{\,2-\beta/2}.
+\end{align}
+Integrando,
+\begin{equation}
+    \rho(t)\propto
+    t^{-2/(2-\beta)}.
+\end{equation}
+Entonces
+\begin{align}
+    Q(t)&\propto
+    t^{-2\beta/(2-\beta)}
+    \longrightarrow\infty,\\
+    H(t)&\propto
+    t^{-\beta/(2-\beta)}
+    \longrightarrow\infty,\\
+    \dot H(t)&\propto
+    t^{-2/(2-\beta)}
+    \longrightarrow0^+.
+\end{align}
+Además,
+\begin{equation}
+    \ln a(t)
+    \propto
+    t^{\,2(1-\beta)/(2-\beta)},
+\end{equation}
+por lo que $a(t)$ crece más rápido que exponencialmente.
+
+\subsection{Relación exacta $a(\rho)$}
+
+Para $\beta\neq1$,
+\begin{equation}
+    \ln\frac{a}{a_0}
+    =
+    \frac{1}{3\gamma}
+    \left[
+    \ln\frac{\rho}{\rho_0}
+    +
+    \frac{\alpha\beta}{\beta-1}
+    \left(
+    \rho^{\beta-1}
+    -
+    \rho_0^{\beta-1}
+    \right)
+    \right].
+\end{equation}
+En F2, con $a_0=\rho_0=1$,
+\begin{equation}
+    \boxed{
+    a(\rho)=
+    \rho^{5/3}
+    \exp\left[
+    \frac{10}{3}
+    \left(
+    \rho^{-2}-1
+    \right)
+    \right]
+    }.
+\end{equation}
+De aquí se demuestra directamente que
+\[
+\rho\to0
+\quad\Longrightarrow\quad
+a\to\infty.
+\]
+
+Para F2 se obtiene en particular
+\begin{align}
+    \rho(t)&\sim(0.2598\,t)^{-2/3},\\
+    H(t)&\sim0.737\,t^{1/3},\\
+    \dot H(t)&\sim0.246\,t^{-2/3},\\
+    \ln a(t)&\sim0.553\,t^{4/3}.
+\end{align}
+
+\section{Interpretación geométrica de F2}
+
+Definiendo cantidades efectivas
+\begin{equation}
+    \rho_{\rm eff}=\rho+Q,
+    \qquad
+    p_{\rm eff}=p-Q,
+\end{equation}
+se tiene
+\begin{equation}
+    w_{\rm eff}
+    =
+    \frac{\omega\rho-Q}{\rho+Q},
+\end{equation}
+y
+\begin{equation}
+    w_{\rm eff}+1
+    =
+    \frac{(1+\omega)\rho}{\rho+Q}.
+\end{equation}
+Por tanto, en la rama F2,
+\begin{equation}
+    w_{\rm eff}\to-1^{-},
+\end{equation}
+pero $H$ no tiende a una constante: diverge. En consecuencia,
+la solución no es asintóticamente de Sitter.
+
+El escalar de Ricci para FLRW plano es
+\begin{equation}
+    \R=6(\dot H+2H^2).
+\end{equation}
+Como $H\to\infty$,
+\[
+\R\to\infty
+\qquad (t\to\infty).
+\]
+También
+\[
+\frac{\ddot a}{a}=H^2+\dot H\to\infty.
+\]
+Por ello el régimen es genuinamente ``rip-like'', aunque no presenta una
+singularidad a tiempo cósmico finito.
+
+\section{Estado de la interpretación de F2}
+
+El nombre \texttt{diffusion\_driven\_infinite\_time\_rip} debe entenderse
+como una etiqueta de trabajo, no como una clasificación establecida en la
+literatura. Geométricamente comparte características con los escenarios
+Little Rip y Little Sibling of the Big Rip: $a,H$ divergen a tiempo
+infinito y la curvatura crece sin cota. Su rasgo distintivo es que la
+densidad del fluido fundamental satisface
+\[
+\rho\to0,
+\]
+mientras que es la función de difusión la que diverge:
+\[
+Q\to\infty.
+\]
+Por ahora debe presentarse como \emph{candidato a régimen asintótico
+dominado por difusión}, no como una nueva clase de singularidad demostrada.
+
+\section{Advertencia termodinámica}
+
+La relación de Gibbs combinada con la ecuación de no conservación de UG
+conduce, bajo las hipótesis termodinámicas usuales, a
+\begin{equation}
+    T\,\dd S=-V\,\dd Q.
+\end{equation}
+En toda la rama F2-like,
+\[
+\alpha>0,\qquad
+\beta<0,\qquad
+\dot\rho<0,
+\]
+por lo que
+\begin{equation}
+    \dot Q
+    =
+    \alpha\beta\rho^{\beta-1}\dot\rho
+    >0.
+\end{equation}
+Si $T>0$ y $V>0$, esto implica $\dot S<0$. Por tanto, el régimen es
+matemáticamente consistente como solución de las ecuaciones de fondo,
+pero presenta una tensión con la segunda ley bajo la formulación
+termodinámica estándar. Esta cuestión debe estudiarse antes de afirmar
+viabilidad física.
+
+\section{Conclusiones para presentar}
+
+\begin{enumerate}
+    \item El barrido completo revela cuatro destinos robustos en el sector
+    phantom: Big Rip, Tipo IV, Little Rip y un régimen asintótico dominado
+    por difusión.
+    \item La frontera $\beta=2$ separa Big Rip y Little Rip para
+    $\alpha>0$ y fue confirmada numéricamente en todos los puntos
+    comparables del barrido.
+    \item Para $\alpha<0$, $\beta>1$, la evolución alcanza $D=0$ a tiempo
+    finito y genera una singularidad Tipo IV.
+    \item Para $\beta<0$, $\alpha>0$ y $D_0<0$, la densidad phantom
+    disminuye hasta cero pero $Q$, $H$, $a$ y la curvatura divergen a
+    tiempo infinito.
+    \item F2 $(\omega,\alpha,\beta)=(-1.2,4,-1)$ es un representante limpio
+    de esta última región y admite una caracterización asintótica y una
+    relación exacta $a(\rho)$.
+    \item La posible novedad de F2 reside en el mecanismo
+    $\rho\to0$ con $Q\to\infty$, no todavía en haber demostrado una nueva
+    clase universal de singularidad.
+\end{enumerate}
+
+\begin{thebibliography}{9}
+
+\bibitem{Corral2020}
+C.~Corral, N.~Cruz y E.~González,
+\emph{Diffusion in unimodular gravity: Analytical solutions, late-time
+acceleration, and cosmological constraints},
+Phys.\ Rev.\ D \textbf{102}, 023508 (2020).
+
+\bibitem{ThermoUG2024}
+M.~Cruz, N.~Cruz y S.~Lepe,
+\emph{Exploring thermodynamics inconsistencies in unimodular gravity:
+a comparative study of two energy diffusion functions},
+Eur.\ Phys.\ J.\ C \textbf{84}, 1186 (2024).
+
+\bibitem{LittleRip}
+P.~H.~Frampton, K.~J.~Ludwick, S.~Nojiri, S.~D.~Odintsov y R.~J.~Scherrer,
+\emph{Models for Little Rip Dark Energy},
+arXiv:1108.0067.
+
+\bibitem{LSBR}
+M.~Bouhmadi-López, A.~Errahmani, P.~Martín-Moruno, T.~Ouali y Y.~Tavakoli,
+\emph{The Little Sibling of the Big Rip singularity},
+arXiv:1407.2446.
+
+\end{thebibliography}
+
+\end{document}
