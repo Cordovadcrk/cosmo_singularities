@@ -1,0 +1,66 @@
+{
+  "omega": -1.2,
+  "alpha_bar": 4,
+  "rho0": 1,
+  "a0": 1,
+  "betas": [
+    -0.5,
+    -1.0,
+    -2.0,
+    -3.0
+  ],
+  "tau": "gamma*sqrt(rho0/3)*(t-t0)",
+  "density_cutoff": 1e-08,
+  "note": "Mismo corte de densidad; distinto tiempo final para cada beta. N=ln(a/a0) no es a.",
+  "verification": [
+    {
+      "beta": -0.5,
+      "friedmann_residual": 4.3478811589818934e-16,
+      "time_tolerance_relative_spread": 0.0
+    },
+    {
+      "beta": -1.0,
+      "friedmann_residual": 4.3398166529149806e-16,
+      "time_tolerance_relative_spread": 1.9984014443252818e-15
+    },
+    {
+      "beta": -2.0,
+      "friedmann_residual": 4.3761800811806987e-16,
+      "time_tolerance_relative_spread": 6.661338147750939e-16
+    },
+    {
+      "beta": -3.0,
+      "friedmann_residual": 5.377978740132024e-16,
+      "time_tolerance_relative_spread": 5.551115123125783e-16
+    }
+  ],
+  "core_sha256": {
+    "singularities.py": "872cbbe9d6773ea283a8026d567593d0599550c8d4e596524c15fc4e291829d6",
+    "models.py": "1379c577698d124b9b4add638c609560fcada3e15bb7b60066c2b7ba372f6e17",
+    "datasets.py": "207c4c4ee93e100de41a35b53a8e71db0a07e0e78a5272563d1d492388a51760",
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "_checkpoints.py": "7edc61fe7feeb68ec6bb557f3b471064254871847a1414d016ff2ee6b3c08c55",
+    "classifiers.py": "c66cb84ab86a6fbfce434078ad2213d68eb5b3264d8fbba4c20f16fcc255d4be",
+    "parameter_space.py": "a2df64343ada02affa471b0e3d027a6d29f043d3df7c0cb0bdf23cbf8900b96d",
+    "barotropic_analysis.py": "7e94cc9150f7f8621e0189aa0f270b9ad349217322386acd292ef035e10ae460",
+    "_analytic.py": "7de21ebb7375732ae632d252f45a8a2a01ec113b182769b2183b0339cf2da1b9"
+  },
+  "original_paper_comparison": [
+    {
+      "beta": -0.5,
+      "relative_error_original_coordinates": 3.054794195378463e-10
+    },
+    {
+      "beta": -1,
+      "relative_error_original_coordinates": 1.1868106497558983e-10
+    },
+    {
+      "beta": -2,
+      "relative_error_original_coordinates": 4.999767266866684e-11
+    },
+    {
+      "beta": -3,
+      "relative_error_original_coordinates": 6.194922352875665e-11
+    }
+  ]
+}
